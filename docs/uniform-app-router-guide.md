@@ -166,7 +166,7 @@ The middleware rewrites every Uniform page request to this route. The folder nam
 
 You can leave it out and the SDK uses its own default.
 
-Because everything is a server component by default, there is no `"use client"` anywhere in our components. Live editing still works because `UniformText` and friends include the small client pieces they need.
+Because everything is a server component by default, none of the page components in `app/components` need `"use client"`. Only the client-side Uniform setup in `lib/uniform/` (and two interactive shadcn files in `components/ui/`) use it. Live editing still works because `UniformText` and friends include the small client pieces they need.
 
 ## Step 7 - Components
 

@@ -31,6 +31,8 @@ flowchart LR
   mw <-->|"Route API"| pm
 ```
 
+![Page rendering overview: author and visitor, Uniform, and the Next.js app](./OnboardingCourse-Diagram-Page-Rendering.png)
+
 **Teaching points**
 - The URL to page mapping is configured in Uniform (the project map), not in code.
 - The same code renders any page an author builds, as long as it knows how to render each component type.
@@ -63,6 +65,8 @@ sequenceDiagram
   end
   C-->>V: HTML
 ```
+
+![Sequence diagram of a page request, from visitor to HTML](./Flow-Diagram.png)
 
 **Teaching points**
 - The visitor never sees `/uniform/<code>`. It is an internal rewrite.
