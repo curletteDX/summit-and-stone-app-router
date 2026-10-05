@@ -14,9 +14,18 @@ importers:
       '@uniformdev/canvas':
         specifier: 20.81.0
         version: 20.81.0
-      '@uniformdev/canvas-react':
+      '@uniformdev/context':
         specifier: 20.81.0
-        version: 20.81.0(immer@10.2.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+        version: 20.81.0
+      '@uniformdev/next-app-router':
+        specifier: 20.81.0
+        version: 20.81.0(immer@10.2.0)(next@16.3.8(@babel/core@7.29.7)(@types/node@20.19.43)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      '@uniformdev/next-app-router-client':
+        specifier: 20.81.0
+        version: 20.81.0(immer@10.2.0)(next@16.3.8(@babel/core@7.29.7)(@types/node@20.19.43)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      '@uniformdev/toolbar-react':
+        specifier: 20.73.5
+        version: 20.73.5(@uniformdev/context@20.81.0)(react@19.2.8)
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -1180,6 +1189,30 @@ packages:
   '@uniformdev/files@20.81.0':
     resolution: {integrity: sha512-e3tYWq1U96aeZawG6IRMXFy7ry9fN2BGaSC7jjSIvciGo9VHuv4wSH3t7Q/h+YcqqQAlHxlF4yyT8fl43bnMvg==}
 
+  '@uniformdev/next-app-router-client@20.81.0':
+    resolution: {integrity: sha512-rC3Zgww+wkzGTLDQUinG7/BNbV9YsZEUzxTQWtFk3oEQgdayGLGAoD7ccUkxrlQAkkB/7V+WnHrQjL6vdip/Ew==}
+    engines: {node: '>=20.9.0'}
+    peerDependencies:
+      next: '>=16.0.7'
+      react: ^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0
+      react-dom: ^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0
+
+  '@uniformdev/next-app-router-shared@20.81.0':
+    resolution: {integrity: sha512-UO4ci+xPIDU5PDxmyfpRWiY2XF5Ro75ZVIGdUtREiEMwnz26K+pUTjEN5jc+SzFRbENhL2sKFaMBSUIP+mxk2Q==}
+    engines: {node: '>=20.9.0'}
+    peerDependencies:
+      next: '>=16.0.7'
+      react: ^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0
+      react-dom: ^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0
+
+  '@uniformdev/next-app-router@20.81.0':
+    resolution: {integrity: sha512-hNkCOfuzH7y2VC6mVmzG+WVTuS6jDq6unr7BRrOPbOJ7y8mvVyrgmi3MvSbtBacBFHj8JsM3VPBBL6AZHubTcg==}
+    engines: {node: '>=20.9.0'}
+    peerDependencies:
+      next: '>=16.0.7'
+      react: ^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0
+      react-dom: ^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0
+
   '@uniformdev/project-map@20.81.0':
     resolution: {integrity: sha512-aQmjx48pF1pkViMak0ZaaWlBrnvR3hEmQQovLDnctrxvWsSdMbvZiIf0QFr+cZiCTv82uDbhdwiguXrJSAtlKw==}
 
@@ -1188,6 +1221,22 @@ packages:
 
   '@uniformdev/richtext@20.81.0':
     resolution: {integrity: sha512-dsQOSSoqliZWTQSq/gN01Xf3xDSiWbqkls6zVt+osINPikmfcPOgU0RcrxxxC8ndwGulzmz9qBp872uitlwvtw==}
+
+  '@uniformdev/toolbar-element@20.73.5':
+    resolution: {integrity: sha512-XGN/XC1bID56N9B5wretMhEs+anRxbvAbL03i43c0ZltcF+2oKbQIaavgbS+L6Ax3bjHtw2TzF9LLlRXfAiVLw==}
+    peerDependencies:
+      '@uniformdev/context': ^20.72.0
+
+  '@uniformdev/toolbar-react@20.73.5':
+    resolution: {integrity: sha512-28cKA7WmphVZhC5XscMFgw2M8nfYxYTMQgeEOX0lkBddTHfsIP2Yxyc+olEOPCr9Xmn9LpPPpgypZ1+XcRnLXg==}
+    peerDependencies:
+      '@uniformdev/context': ^20.72.0
+      react: '>=18'
+
+  '@uniformdev/toolbar@20.73.5':
+    resolution: {integrity: sha512-ASbQY3UIlXV1APml25gL4B1m+QQHctVnKo5RENF37e78bcI5hmKTLDgAeofU/SqhQI3oA9BwFymhENn1+eSPVw==}
+    peerDependencies:
+      '@uniformdev/context': ^20.72.0
 
   '@uniformdev/webhooks@20.81.0':
     resolution: {integrity: sha512-8aQiyqsobtMtcY9SpPu7ut6Q1S0not5o6VHutvMaS6LYPHVvRHCarG6C//rvtE/mLgGOyh7kVTsq502DryO7ug==}
@@ -1311,6 +1360,29 @@ packages:
     resolution: {integrity: sha512-nAB74NfSNKknqQ1RrYj6uz8FcXEomu/MATJZxh/x+BArzN2U3JbOYC0APYzUIGhVY3m5hRxA8VPNdPBoG8txlA==}
     cpu: [x64]
     os: [win32]
+
+  '@vercel/cli-config@0.3.1':
+    resolution: {integrity: sha512-sISbygqlFXYb8qfPu/+2Cf/A8IjrlAuZePdag3EDQr2PRA455s7UZtl9Ro674CWsB/saBRmz3jEkw0YsQs8OoQ==}
+
+  '@vercel/cli-exec@1.0.1':
+    resolution: {integrity: sha512-g9XerViJ/paZujufXYcu5XYI2vU2rtB4sgdpjUHde5RnOkdmpu0ngH46LCFGHoPXO/C+qDPSczIHIRN+8Q2YKQ==}
+    engines: {node: '>= 18'}
+
+  '@vercel/functions@3.9.11':
+    resolution: {integrity: sha512-DbqKqcbUHGBTYgHZieSNDuF1/L2iSPZV0OGm0Xkm/t+s61lFk4VX8yGQ22Og3WYGxypW1l4Elx1NP8BL928u8Q==}
+    engines: {node: '>= 20'}
+    peerDependencies:
+      '@aws-sdk/credential-provider-web-identity': '*'
+      ws: '>=8'
+    peerDependenciesMeta:
+      '@aws-sdk/credential-provider-web-identity':
+        optional: true
+      ws:
+        optional: true
+
+  '@vercel/oidc@4.0.0':
+    resolution: {integrity: sha512-ko6ATeRUlHZMB5hLFdC7+/Q1dI2f3NX3gZHxtpALdkxurwjD5HFHGWYF+4o+4SF0E47jg6KzcHknmRpHcKgJ5A==}
+    engines: {node: '>= 20'}
 
   abort-controller@3.0.0:
     resolution: {integrity: sha512-h8lQ8tacZYnR3vNQTgibj+tODHI5/+l06Au2Pcriv/Gmet0eaj4TwWH41sO9wnHDiQsEj19q0drzdWdeAHtweg==}
@@ -1798,6 +1870,9 @@ packages:
     resolution: {integrity: sha512-Q0n9HRi4m6JuGIV1eFlmvJB7ZEVxu93IrMyiMsGC0lrMJMWzRgx6WGquyfQgZVb31vhGgXnfmPNNXmxnOkRBrg==}
     engines: {node: '>= 0.8'}
 
+  encoding@0.1.13:
+    resolution: {integrity: sha512-ETBauow1T35Y/WZMkio9jiM0Z5xjHHmJ4XmjZOq1l/dXz3lr2sRn87nJy20RupqSh1F2m3HHPSp8ShIPQJrJ3A==}
+
   enhanced-resolve@5.26.0:
     resolution: {integrity: sha512-9vhedylFonb2YGogzUKX6+Ja72gOJbN1QHAqdrvqLwhdl/QWbKopzoUC9EbQNVsAns/bx/4uyqalrQAoy1IByw==}
     engines: {node: '>=10.13.0'}
@@ -2265,6 +2340,10 @@ packages:
     resolution: {integrity: sha512-eKCa6bwnJhvxj14kZk5NCPc6Hb6BdsU9DZcOnmQKSnO1VKrfV0zCvtttPZUsBvjmNDn8rpcJfpwSYnHBjc95MQ==}
     engines: {node: '>=18.18.0'}
 
+  iconv-lite@0.6.3:
+    resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
+    engines: {node: '>=0.10.0'}
+
   iconv-lite@0.7.3:
     resolution: {integrity: sha512-IKXpvIzjnC9XTAUbVBcMfGS0EPaIXtW6v+zr+RRp+hqULEpo0owZax6wyRwPOJbWbzjYspQwusTsfVr0ifh4uQ==}
     engines: {node: '>=0.10.0'}
@@ -2520,6 +2599,9 @@ packages:
   jiti@2.7.0:
     resolution: {integrity: sha512-AC/7JofJvZGrrneWNaEnJeOLUx+JlGt7tNa0wZiRPT4MY1wmfKjt2+6O2p2uz2+skll8OZZmJMNqeke7kKbNgQ==}
     hasBin: true
+
+  jose@5.10.0:
+    resolution: {integrity: sha512-s+3Al/p9g32Iq+oqXxkW//7jk2Vig6FF1CFqzVXoTUXt2qz89YWbL+OwS17NFYEvxC35n0FKeGO2LGYSxeM2Gg==}
 
   jose@6.2.12:
     resolution: {integrity: sha512-9NiFmJEex0sy2Dk58j2UGBSHgUs2ypF9eZSu4L6vjOX3Dp96Sw1F3uL+H+D1sx02jZZdzUT0HgvCy59CuvXcWw==}
@@ -2947,6 +3029,10 @@ packages:
     resolution: {integrity: sha512-84cglkRILFxdtA8hAvLNdMrtBpPNBTrQ9/ulg0FA7xLMnD6mifv+enAIeRmvtv+WgdCE+LPGOfQmtJRrVaIVhQ==}
     engines: {node: '>=20'}
 
+  os-paths@4.4.0:
+    resolution: {integrity: sha512-wrAwOeXp1RRMFfQY8Sy7VaGVmPocaLwSFOYCGKSyo8qmJ+/yaafCl5BCA1IQZWqFSRBrKDYFeR9d/VyQzfH/jg==}
+    engines: {node: '>= 6.0'}
+
   own-keys@1.0.2:
     resolution: {integrity: sha512-19YVAg7T+WTrxggPukVq7DjTv6+PJ867TmhCvBsYwmbFCsZd344rq2Ld1p0wo8f8Qrrhgp82c6FJRqdXWtSEhg==}
     engines: {node: '>= 0.4'}
@@ -3258,6 +3344,9 @@ packages:
   serve-static@2.2.1:
     resolution: {integrity: sha512-xRXBn0pPqQTVQiC8wyQrKs2MOlX24zQ0POGaj0kultvoOCstBQM5yvOhAVSUwOMjQtTvsPWoNCHfPGwaaQJhTw==}
     engines: {node: '>= 18'}
+
+  server-only@0.0.1:
+    resolution: {integrity: sha512-qepMx2JxAa5jjfzxG79yPPq+8BuFToHd1hm7kI+Z4zAq1ftQiP7HcxMhDDItrbtwVeLg/cY2JnKnrcFkmiswNA==}
 
   set-function-length@1.2.2:
     resolution: {integrity: sha512-pgRc4hJ4/sNjWCSS9AmnS40x3bNMDTknHgL5UaMBTMyJnU90EgWh1Rz+MC9eFu4BuN/UwZjKQuY/1v3rM7HMfg==}
@@ -3617,6 +3706,10 @@ packages:
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
+  uuid@11.1.1:
+    resolution: {integrity: sha512-vIYxrBCC/N/K+Js3qSN88go7kIfNPssr/hHCesKCQNAjmgvYS2oqr69kIufEG+O4+PfezOH4EbIeHCfFov8ZgQ==}
+    hasBin: true
+
   validate-npm-package-name@7.0.2:
     resolution: {integrity: sha512-hVDIBwsRruT73PbK7uP5ebUt+ezEtCmzZz3F59BSr2F6OVFnJ/6h8liuvdLrQ88Xmnk6/+xGGuq+pG9WwTuy3A==}
     engines: {node: ^20.17.0 || >=22.9.0}
@@ -3666,6 +3759,14 @@ packages:
     resolution: {integrity: sha512-g/eziiSUNBSsdDJtCLB8bdYEUMj4jR7AGeUo96p/3dTafgjHhpF4RiCFPiRILwjQoDXx5MqkBr4fwWtR3Ky4Wg==}
     engines: {node: '>=20'}
 
+  xdg-app-paths@5.5.1:
+    resolution: {integrity: sha512-hI3flOB4PLZIy5prbtTpirobtPE2ZtZ52szO+2mM9Efp6ErM398La+C1lIpNWDfNoQk+6Lsi6nMcCwVB7pxeMQ==}
+    engines: {node: '>= 6.0'}
+
+  xdg-portable@7.3.0:
+    resolution: {integrity: sha512-sqMMuL1rc0FmMBOzCpd0yuy9trqF2yTTVe+E9ogwCSWQCdDEtQUwrZPT6AxqtsFGRNxycgncbP/xmOOSPw5ZUw==}
+    engines: {node: '>= 6.0'}
+
   y18n@5.0.8:
     resolution: {integrity: sha512-0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA==}
     engines: {node: '>=10'}
@@ -3710,6 +3811,9 @@ packages:
 
   zod@3.25.76:
     resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
+
+  zod@4.1.11:
+    resolution: {integrity: sha512-WPsqwxITS2tzx1bzhIKsEs19ABD5vmCVa4xBo2tq/SrV4RNZtfws1EnCWQXM6yh8bD08a1idvkB5MZSBiZsjwg==}
 
   zod@4.4.3:
     resolution: {integrity: sha512-ytENFjIJFl2UwYglde2jchW2Hwm4GJFLDiSXWdTrJQBIN9Fcyp7n4DhxJEiWNAJMV1/BqWfW/kkg71UDcHJyTQ==}
@@ -4828,6 +4932,48 @@ snapshots:
     dependencies:
       '@uniformdev/context': 20.81.0
 
+  '@uniformdev/next-app-router-client@20.81.0(immer@10.2.0)(next@16.3.8(@babel/core@7.29.7)(@types/node@20.19.43)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
+    dependencies:
+      '@uniformdev/canvas': 20.81.0
+      '@uniformdev/canvas-react': 20.81.0(immer@10.2.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      '@uniformdev/context': 20.81.0
+      '@uniformdev/next-app-router-shared': 20.81.0(next@16.3.8(@babel/core@7.29.7)(@types/node@20.19.43)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      js-cookie: 3.0.8
+      next: 16.3.8(@babel/core@7.29.7)(@types/node@20.19.43)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      react: 19.2.8
+      react-dom: 19.2.8(react@19.2.8)
+    transitivePeerDependencies:
+      - immer
+
+  '@uniformdev/next-app-router-shared@20.81.0(next@16.3.8(@babel/core@7.29.7)(@types/node@20.19.43)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
+    dependencies:
+      '@uniformdev/canvas': 20.81.0
+      '@uniformdev/context': 20.81.0
+      next: 16.3.8(@babel/core@7.29.7)(@types/node@20.19.43)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      react: 19.2.8
+      react-dom: 19.2.8(react@19.2.8)
+      uuid: 11.1.1
+
+  '@uniformdev/next-app-router@20.81.0(immer@10.2.0)(next@16.3.8(@babel/core@7.29.7)(@types/node@20.19.43)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
+    dependencies:
+      '@uniformdev/canvas-react': 20.81.0(immer@10.2.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      '@uniformdev/next-app-router-client': 20.81.0(immer@10.2.0)(next@16.3.8(@babel/core@7.29.7)(@types/node@20.19.43)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      '@uniformdev/next-app-router-shared': 20.81.0(next@16.3.8(@babel/core@7.29.7)(@types/node@20.19.43)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      '@uniformdev/redirect': 20.81.0
+      '@uniformdev/richtext': 20.81.0
+      '@uniformdev/webhooks': 20.81.0
+      '@vercel/functions': 3.9.11
+      encoding: 0.1.13
+      next: 16.3.8(@babel/core@7.29.7)(@types/node@20.19.43)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      react: 19.2.8
+      react-dom: 19.2.8(react@19.2.8)
+      server-only: 0.0.1
+      svix: 1.99.1
+    transitivePeerDependencies:
+      - '@aws-sdk/credential-provider-web-identity'
+      - immer
+      - ws
+
   '@uniformdev/project-map@20.81.0':
     dependencies:
       '@uniformdev/canvas': 20.81.0
@@ -4840,6 +4986,22 @@ snapshots:
       rfdc: 1.4.1
 
   '@uniformdev/richtext@20.81.0': {}
+
+  '@uniformdev/toolbar-element@20.73.5(@uniformdev/context@20.81.0)':
+    dependencies:
+      '@uniformdev/context': 20.81.0
+      '@uniformdev/toolbar': 20.73.5(@uniformdev/context@20.81.0)
+
+  '@uniformdev/toolbar-react@20.73.5(@uniformdev/context@20.81.0)(react@19.2.8)':
+    dependencies:
+      '@uniformdev/context': 20.81.0
+      '@uniformdev/toolbar': 20.73.5(@uniformdev/context@20.81.0)
+      '@uniformdev/toolbar-element': 20.73.5(@uniformdev/context@20.81.0)
+      react: 19.2.8
+
+  '@uniformdev/toolbar@20.73.5(@uniformdev/context@20.81.0)':
+    dependencies:
+      '@uniformdev/context': 20.81.0
 
   '@uniformdev/webhooks@20.81.0':
     dependencies:
@@ -4914,6 +5076,25 @@ snapshots:
 
   '@unrs/resolver-binding-win32-x64-msvc@1.12.2':
     optional: true
+
+  '@vercel/cli-config@0.3.1':
+    dependencies:
+      xdg-app-paths: 5.5.1
+      zod: 4.1.11
+
+  '@vercel/cli-exec@1.0.1':
+    dependencies:
+      execa: 5.1.1
+
+  '@vercel/functions@3.9.11':
+    dependencies:
+      '@vercel/oidc': 4.0.0
+
+  '@vercel/oidc@4.0.0':
+    dependencies:
+      '@vercel/cli-config': 0.3.1
+      '@vercel/cli-exec': 1.0.1
+      jose: 5.10.0
 
   abort-controller@3.0.0:
     dependencies:
@@ -5362,6 +5543,10 @@ snapshots:
   emoji-regex@9.2.2: {}
 
   encodeurl@2.0.0: {}
+
+  encoding@0.1.13:
+    dependencies:
+      iconv-lite: 0.6.3
 
   enhanced-resolve@5.26.0:
     dependencies:
@@ -6052,6 +6237,10 @@ snapshots:
 
   human-signals@8.0.1: {}
 
+  iconv-lite@0.6.3:
+    dependencies:
+      safer-buffer: 2.1.2
+
   iconv-lite@0.7.3:
     dependencies:
       safer-buffer: 2.1.2
@@ -6277,6 +6466,8 @@ snapshots:
   jiti@1.21.7: {}
 
   jiti@2.7.0: {}
+
+  jose@5.10.0: {}
 
   jose@6.2.12: {}
 
@@ -6687,6 +6878,8 @@ snapshots:
       stdin-discarder: 0.3.2
       string-width: 8.3.0
 
+  os-paths@4.4.0: {}
+
   own-keys@1.0.2:
     dependencies:
       call-bound: 1.0.4
@@ -7004,6 +7197,8 @@ snapshots:
       send: 1.2.1
     transitivePeerDependencies:
       - supports-color
+
+  server-only@0.0.1: {}
 
   set-function-length@1.2.2:
     dependencies:
@@ -7479,6 +7674,8 @@ snapshots:
 
   util-deprecate@1.0.2: {}
 
+  uuid@11.1.1: {}
+
   validate-npm-package-name@7.0.2: {}
 
   vary@1.1.2: {}
@@ -7547,6 +7744,15 @@ snapshots:
       is-wsl: 3.1.1
       powershell-utils: 0.1.0
 
+  xdg-app-paths@5.5.1:
+    dependencies:
+      os-paths: 4.4.0
+      xdg-portable: 7.3.0
+
+  xdg-portable@7.3.0:
+    dependencies:
+      os-paths: 4.4.0
+
   y18n@5.0.8: {}
 
   yallist@3.1.1: {}
@@ -7581,6 +7787,8 @@ snapshots:
       zod: 4.6.5
 
   zod@3.25.76: {}
+
+  zod@4.1.11: {}
 
   zod@4.4.3: {}
 

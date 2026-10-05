@@ -1,12 +1,12 @@
-import BlogArticleIntro from "@/app/components/BlogArticleIntro";
-import ContentBlock from "@/app/components/ContentBlock";
-import FeaturedProducts from "@/app/components/FeaturedProducts";
-import HeroSection from "@/app/components/HeroSection";
-import ImageWithText from "@/app/components/ImageWithText";
-import LatestArticles from "@/app/components/LatestArticles";
-import ProductCard from "@/app/components/ProductCard";
-import TopicCard from "@/app/components/TopicCard";
-import TopicCards from "@/app/components/TopicCards";
+import BlogArticleIntro from "@/app/static/_components/BlogArticleIntro";
+import ContentBlock from "@/app/static/_components/ContentBlock";
+import FeaturedProducts from "@/app/static/_components/FeaturedProducts";
+import HeroSection from "@/app/static/_components/HeroSection";
+import ImageWithText from "@/app/static/_components/ImageWithText";
+import LatestArticles from "@/app/static/_components/LatestArticles";
+import ProductCard from "@/app/static/_components/ProductCard";
+import TopicCard from "@/app/static/_components/TopicCard";
+import TopicCards from "@/app/static/_components/TopicCards";
 
 // Every value on this page is hardcoded sample content.
 // Later in the course you will replace these with data from Uniform.
@@ -19,21 +19,21 @@ const topics = [
     description: "Trail-tested packs, boots and layers for day hikes and long treks.",
     imageUrl: photo("1551632811-561732d1e306", 800),
     imageAlt: "Two hikers with backpacks walking a mountain trail",
-    href: "/#featured-products",
+    href: "/static#featured-products",
   },
   {
     title: "Climbing",
     description: "Ropes, harnesses and shoes for rock walls and sea cliffs alike.",
     imageUrl: photo("1522163182402-834f871fd851", 800),
     imageAlt: "A climber in a yellow shirt hanging from an overhanging cliff",
-    href: "/#featured-products",
+    href: "/static#featured-products",
   },
   {
     title: "Biking",
     description: "Road and commuter bikes built for long days in the saddle.",
     imageUrl: photo("1541625602330-2277a4c46182", 800),
     imageAlt: "Two cyclists riding road bikes along a coastal road",
-    href: "/#featured-products",
+    href: "/static#featured-products",
   },
 ];
 

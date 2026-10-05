@@ -1,4 +1,4 @@
-import BlogArticleDetail from "@/app/components/BlogArticleDetail";
+import BlogArticleDetail from "@/app/static/_components/BlogArticleDetail";
 
 // Hardcoded sample content. Later in the course this comes from Uniform.
 export default function StaticArticlePage() {

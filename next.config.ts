@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { withUniformConfig } from "@uniformdev/next-app-router/config";
 
 const nextConfig: NextConfig = {
   images: {
@@ -14,12 +15,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  // Serve the static site at "/" while it is hardcoded. Every other path still
-  // goes to the Uniform catch-all route. Remove this rewrite when "/" should
-  // come from Uniform.
-  async rewrites() {
-    return [{ source: "/", destination: "/static" }];
-  },
 };
 
-export default nextConfig;
+export default withUniformConfig(nextConfig);

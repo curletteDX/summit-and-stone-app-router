@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
-import NavBar from "@/app/components/NavBar";
+import NavBar from "@/app/static/_components/NavBar";
 
 export const metadata: Metadata = {
   title: "Summit & Stone",
