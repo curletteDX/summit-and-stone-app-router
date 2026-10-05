@@ -134,9 +134,9 @@ Component files are client components (`"use client"`) because they use `Uniform
 
 ### HeroSection
 
-This is the original hardcoded component, converted:
+`HeroSection.tsx` in the starter is plain Next.js code. `title`, `subtitle` and `imageUrl` arrive as props and nothing is registered with Uniform yet, so a Hero on a page shows as "not implemented". **Connecting it is your exercise.** Convert it like this:
 
-- **Before:** `title`, `subtitle` and `imageUrl` arrived as props.
+- **Before:** `title`, `subtitle` and `imageUrl` arrive as props.
 - **After:** the text is rendered with `<UniformText parameterId="title" />`. This displays the value *and* lets authors click the text in the Uniform preview and type directly. `placeholder` is what authors see when the field is empty.
 - Images arrive as an asset parameter. `flattenValues(image, { toSingle: true })` turns Uniform's asset structure into one simple object, and `.url` is the image address.
 - `ComponentProps<{ image?: AssetParamValue }>` types the props. Every parameter prop is optional because authors can leave things empty, even when a field is marked required.
