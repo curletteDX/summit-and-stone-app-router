@@ -9,7 +9,7 @@ import TopicCard from "@/app/components/TopicCard";
 import TopicCards from "@/app/components/TopicCards";
 
 // Every value on this page is hardcoded sample content.
-// Later in the course you will replace these with data from Uniform.
+// Later in the course you will replace these with real data.
 const photo = (id: string, width: number) =>
   `https://images.unsplash.com/photo-${id}?w=${width}&q=80`;
 
@@ -108,7 +108,7 @@ export default function StaticHomePage() {
 
       <ContentBlock
         heading="Built for the trail ahead"
-        linkHref="/static/article"
+        linkHref="/article"
         linkText="Read our latest story"
       >
         <p>
@@ -160,13 +160,13 @@ export default function StaticHomePage() {
       <LatestArticles
         id="news"
         heading="Latest News and Views"
-        viewAllHref="/static/article"
+        viewAllHref="/article"
       >
         {articles.map((article) => (
           <BlogArticleIntro
             key={article.title}
             {...article}
-            href="/static/article"
+            href="/article"
           />
         ))}
       </LatestArticles>

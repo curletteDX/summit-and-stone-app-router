@@ -1,6 +1,6 @@
 import BlogArticleDetail from "@/app/components/BlogArticleDetail";
 
-// Hardcoded sample content. Later in the course this comes from Uniform.
+// Hardcoded sample content.
 export default function StaticArticlePage() {
   return (
     <BlogArticleDetail
