@@ -30,7 +30,7 @@ flowchart TD
 ## Files at a glance
 
 - `middleware.ts` - runs before every page request; resolves the URL to a Uniform page.
-- `lib/uniform/locale.ts` - the default locale (`en-US`) used by the middleware and the static params.
+- `lib/uniform/locale.ts` - the supported locales and the default locale (`en-US`), used by the middleware and the static params.
 - `app/uniform/[code]/page.tsx` - the page the middleware rewrites to; renders the composition.
 - `app/components/resolveComponent.tsx` - maps Uniform component types to React components.
 - `app/components/Page.tsx` - the page layout: a hardcoded NavBar and Footer around the `content` slot.
@@ -105,7 +105,7 @@ Do this in the Uniform dashboard for **your** project (check the project id matc
    - `subtitle` (text)
    - `image` (asset, images only)
 3. **Hero pattern** - create a component pattern from Hero with sample copy, and make every parameter overridable.
-4. **A page to render** - create a composition of type Page, add a Hero Section to its `content` slot, and attach it to the project map node `/:locale` (a new Uniform project has this node, named Home). `:locale` is a placeholder for the visitor's locale, so this page lives at `/en-US`. Our middleware (Step 5) makes `/` show it too. Publish the page.
+4. **A page to render** - create a composition of type Page, add a Hero Section to its `content` slot, and attach it to the project map node `/:locale` (a new Uniform project has this node, named Home). `:locale` is a placeholder for the visitor's locale, so this page lives at `/en-US`. Our middleware (Step 5) redirects `/` to `/en-US`, so the home page opens from `/` too. Publish the page.
 5. **Preview URL** - in the project's preview settings add `http://localhost:3000/api/preview?secret=hello-world`. Uniform asks the endpoint whether a playground exists and finds out automatically that it does.
 6. Run `pnpm uniform:pull` to save the definitions into `uniform-data/`.
 
@@ -116,20 +116,29 @@ The public IDs matter: the strings `page` and `heroSection` must exactly match t
 File: `middleware.ts`
 
 ```ts
-export default uniformMiddleware({
-  rewriteRequestPath: async ({ url }) => ({
-    path: `${withLocale(url.pathname)}${url.search}`,
-  }),
+const handleUniform = uniformMiddleware({
   rewriteDestinationPath: async ({ code, source }) =>
     source === "playground" ? `/playground/${code}` : "",
 });
+
+export default function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+
+  if (!pathname.startsWith(playgroundPath) && !hasLocale(pathname)) {
+    const url = request.nextUrl.clone();
+    url.pathname = `/${defaultLocale}${pathname === "/" ? "" : pathname}`;
+    return NextResponse.redirect(url);
+  }
+
+  return handleUniform(request);
+}
 ```
 
 This is the heart of the SDK. For every page request, the middleware:
 
 1. Asks the Uniform Route API which composition lives at the requested path.
 2. Works out any personalization or A/B test variants for the visitor (we do not use these yet).
-3. Rewrites the request to `/uniform/<code>`. The visitor's address bar still shows the original URL. `<code>` is a short encoded string holding the middleware's decisions: which path was requested, draft or published, and which personalization or test variants this visitor gets. It does **not** contain the page content. The page decodes it and loads the content itself.
+3. Rewrites the request to `/uniform/<code>`. The visitor's address bar still shows the requested URL (for example `/en-US`). `<code>` is a short encoded string holding the middleware's decisions: which path was requested, draft or published, and which personalization or test variants this visitor gets. It does **not** contain the page content. The page decodes it and loads the content itself.
 4. Returns a 404 page if Uniform has nothing at that path, and issues redirects that are configured in Uniform.
 
 The `matcher` decides which requests the middleware sees. Ours skips `api`, `static`, Next.js internals and a few well-known files:
@@ -140,7 +149,9 @@ matcher: ["/((?!api|static(?:/|$)|_next/static|_next/image|favicon.ico|sitemap.x
 
 `static(?:/|$)` is our own addition. It keeps the hardcoded reference site at `/static` out of Uniform's hands.
 
-`rewriteRequestPath` changes the path **before** it is looked up in Uniform. Our project map has a `/:locale` node, so the home page is `/en-US`, not `/`. `withLocale` adds the default locale (from `lib/uniform/locale.ts`) to any path that does not start with it, so `/` is looked up as `/en-US` and `/about` as `/en-US/about`. The visitor's address bar is not changed. Remove this function if your project map has plain nodes like `/` and `/about`.
+**Locales.** Our project map has a `/:locale` node, so the home page is `/en-US`, not `/`. Our own `middleware` function runs first and makes sure every URL starts with a supported locale. If the first path segment is not in `locales` (from `lib/uniform/locale.ts`), it redirects (307) to the same URL with the default locale added: `/` goes to `/en-US`, `/about?x=1` goes to `/en-US/about?x=1`. This is the approach recommended in the [Next.js internationalization guide](https://nextjs.org/docs/app/guides/internationalization). Uniform's own playground URL, `/uniform/playground`, is skipped because it has no locale. Everything else is handed to `uniformMiddleware`, which looks the path up as is.
+
+To support another language, add its code to `locales` (and enable it in Uniform on the pages that need it). Remove the redirect if your project map has plain nodes like `/` and `/about`.
 
 `rewriteDestinationPath` is about the playground. The SDK's default is to rewrite playground requests to `/uniform/playground/<code>`. This project keeps its playground page at `app/playground/[code]`, so we tell the middleware to rewrite there instead. Uniform still opens `/uniform/playground` (the SDK's default playground URL); only the internal destination changes. Returning an empty string for normal pages means "use the default", `/uniform/<code>`.
 
@@ -298,7 +309,7 @@ Start the app: `pnpm dev`
 2. `http://localhost:3000/api/preview?secret=wrong&path=/` returns 401.
 3. `http://localhost:3000/api/preview?secret=hello-world&path=/` redirects (307) to `/`.
 4. `http://localhost:3000/static` shows the hardcoded reference site, and `http://localhost:3000/static/article` shows its article page. These work without Uniform.
-5. `http://localhost:3000/` (and `/en-US`) shows your Uniform home page once it exists **and is published**. A 404 means the page is not attached to the `/:locale` node, or it is not published yet. In draft mode (through the preview URL) unpublished pages show too.
+5. `http://localhost:3000/` redirects to `/en-US`, which shows your Uniform home page once it exists **and is published**. A 404 means the page is not attached to the `/:locale` node, or it is not published yet. In draft mode (through the preview URL) unpublished pages show too.
 6. In Uniform, open the page in the visual editor. Click the Hero title and type: the text should update live (after you have connected `HeroSection`).
 7. In Uniform, open the Hero pattern. The playground loads and renders the pattern.
 
@@ -311,7 +322,7 @@ Also run `pnpm exec eslint .` and `pnpm exec tsc --noEmit`. If `tsc` complains a
 - **Editor shows published content, not your edits.** The draft cookie was not sent. Check you are using `/api/preview` as the preview URL and that your browser allows third-party cookies for `localhost` while testing.
 - **"Component \"heroSection\" couldn't be resolved" in the preview.** The key in `componentMap` does not match the Uniform public ID, or you have not added it yet.
 - **Image fails with a 400.** Add the image host to `remotePatterns` in `next.config.ts`.
-- **The home page (`/`) is a 404.** A published composition must be attached to the project map node `/:locale` (the middleware turns `/` into `/en-US` for the lookup). Check the page is published and your project's default locale is `en-US`. The finished hardcoded version is always available at `/static`.
+- **The home page (`/`) is a 404.** A published composition must be attached to the project map node `/:locale` (the middleware redirects `/` to `/en-US`). Check the page is published and your project's default locale is `en-US`. The finished hardcoded version is always available at `/static`.
 - **Clicking text in the preview does nothing.** The text is not rendered with `UniformText`, or you passed a `parameter` from a different component.
 - **A new page you add outside Uniform (for example `app/about/page.tsx`) shows a 404.** The middleware sends every path not excluded in its `matcher` to Uniform. Add the folder name to the `matcher` exclusions, like `static`.
 - **Warnings about `middleware` and the Edge Runtime at startup.** Expected. See Step 5.
@@ -340,4 +351,4 @@ The files in `components/ui/` (`button`, `card`, `badge`, `toggle`, `toggle-grou
 
 ## Where this guide stops
 
-Not covered yet, and good follow-up lessons: personalization and A/B tests (the middleware already evaluates them; you author them in Uniform), turning the NavBar and Footer into Uniform components, page metadata from composition parameters, locales, and turning on Next.js `cacheComponents` for cached routes (import `resolveRouteFromCode` from `@uniformdev/next-app-router/cache`).
+Not covered yet, and good follow-up lessons: personalization and A/B tests (the middleware already evaluates them; you author them in Uniform), turning the NavBar and Footer into Uniform components, page metadata from composition parameters, more locales (the redirect is ready, but content, a language switcher and `<html lang>` are not), and turning on Next.js `cacheComponents` for cached routes (import `resolveRouteFromCode` from `@uniformdev/next-app-router/cache`).

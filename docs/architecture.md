@@ -52,11 +52,12 @@ sequenceDiagram
   participant R as resolveComponent
 
   V->>M: GET /
-  M->>M: add the locale, so / becomes /en-US
+  M-->>V: no locale in the URL, redirect to /en-US
+  V->>M: GET /en-US
   M->>U: What page is at /en-US?
   U-->>M: Composition Home (published)
   M->>M: encode the decisions into a code
-  M->>P: rewrite to /uniform/code (address bar still shows /)
+  M->>P: rewrite to /uniform/code (address bar still shows /en-US)
   P->>C: render with the code and resolveComponent
   C->>U: load the composition
   loop every component in the page
@@ -111,11 +112,11 @@ flowchart LR
 
 ## 4. How does a URL find its page?
 
-**The project map in Uniform decides. Our middleware adds the locale so that `/` finds the `/:locale` node.**
+**The project map in Uniform decides. Our middleware makes sure the URL starts with a locale, so it finds the `/:locale` node.**
 
 ```mermaid
 flowchart LR
-  url["Visitor asks for /"] --> mw["middleware: withLocale<br/>/ becomes /en-US"]
+  url["Visitor asks for /"] --> mw["middleware<br/>no locale, so redirect to /en-US"]
   mw --> pmap
 
   subgraph pmap["Project map in Uniform"]
@@ -126,12 +127,13 @@ flowchart LR
   end
 
   node --> comp["Composition 'Home'"]
-  comp --> render["Rendered as the page at /"]
+  comp --> render["Rendered as the page at /en-US"]
 ```
 
 **Teaching points**
 - `:locale` is a placeholder in the project map, like `[code]` is in Next.js folders.
-- If your project map has plain nodes (`/`, `/about`), you would not need the locale rewrite.
+- The supported locales are listed in `lib/uniform/locale.ts` (only `en-US` for now). A URL whose first segment is not in that list gets the default locale added by a redirect.
+- If your project map has plain nodes (`/`, `/about`), you would not need the locale redirect.
 - Adding a page means creating a composition and attaching it to a node in Uniform. No code change.
 
 ## 5. How does live preview work for authors?
@@ -174,7 +176,8 @@ flowchart LR
 
 | File | Job | Diagram |
 |---|---|---|
-| `middleware.ts` | Looks the URL up in Uniform, then rewrites to the render page | 2, 4 |
+| `middleware.ts` | Adds the locale by redirect, looks the URL up in Uniform, then rewrites to the render page | 2, 4 |
+| `lib/uniform/locale.ts` | Supported locales and the default locale | 4 |
 | `app/uniform/[code]/page.tsx` | Renders the page for a code | 2 |
 | `app/components/resolveComponent.tsx` | Maps component types to React components | 3 |
 | `app/components/Page.tsx` | Page layout: NavBar, content slot, Footer | 3 |
