@@ -177,7 +177,7 @@ The middleware rewrites every Uniform page request to this route. The folder nam
 
 You can leave it out and the SDK uses its own default.
 
-Because everything is a server component by default, none of the page components in `app/components` need `"use client"`. Only the client-side Uniform setup in `lib/uniform/` (and two interactive shadcn files in `components/ui/`) use it. Live editing still works because `UniformText` and friends include the small client pieces they need.
+Because everything is a server component by default, none of the page components in `app/components` need `"use client"`. Only the client-side Uniform setup in `lib/uniform/` uses it. Live editing still works because `UniformText` and friends include the small client pieces they need.
 
 ## Step 7 - Components
 
@@ -345,9 +345,9 @@ If you have seen Uniform on the Pages Router, or on an earlier App Router SDK, t
 3. Create `app/components/MyThing.tsx`. Type its props with `ComponentProps<MyThingParameters, MyThingSlots>` and render parameters with `UniformText` / `UniformSlot`.
 4. In `app/components/resolveComponent.tsx`, add `myThing: MyThing` to `componentMap`.
 
-## About the shadcn/ui setup
+## Styling
 
-The files in `components/ui/` (`button`, `card`, `badge`, `toggle`, `toggle-group`) were generated with the shadcn CLI. The CLI wrote `import { cn } from "cn"`, which points at an unrelated npm package, and it also added a `cn` dependency to `package.json`. This project uses the standard helper instead: `lib/utils.ts` exports `cn` built from `clsx` and `tailwind-merge`, and the generated files import it from `@/lib/utils`. If you add more shadcn components, change any `from "cn"` import the same way and run `pnpm remove cn`.
+All styling is plain Tailwind CSS (v4) utility classes, written directly in the components. There is no component library: no shadcn/ui and no Base UI. `app/globals.css` only imports Tailwind, maps the Geist fonts and sets the page background and default border colour. `lib/utils.ts` exports `cn`, a small helper (from `clsx` and `tailwind-merge`) for combining class names. Icons come from `lucide-react`.
 
 ## Where this guide stops
 

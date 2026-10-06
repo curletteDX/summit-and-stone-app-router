@@ -1,7 +1,6 @@
 import { Sparkles } from "lucide-react";
 import type { ReactNode } from "react";
 
-import { Badge } from "@/components/ui/badge";
 
 interface FeaturedProductsProps {
   id?: string;
@@ -23,10 +22,10 @@ export default function FeaturedProducts({
     >
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 flex flex-col items-center text-center">
-          <Badge className="mb-4 h-auto gap-2 bg-amber-100 px-4 py-1.5 text-sm text-amber-900">
+          <span className="mb-4 inline-flex w-fit items-center justify-center gap-2 rounded-full bg-amber-100 px-4 py-1.5 text-sm font-medium text-amber-900 [&>svg]:size-3">
             <Sparkles aria-hidden="true" />
             Featured Collection
-          </Badge>
+          </span>
           <h2 className="mb-4 text-balance text-3xl font-bold text-zinc-900 md:text-4xl lg:text-5xl">
             {heading}
           </h2>

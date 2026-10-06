@@ -1,7 +1,6 @@
 import Image from "next/image";
 import type { ReactNode } from "react";
 
-import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
 interface ImageWithTextProps {
@@ -23,7 +22,7 @@ export default function ImageWithText({
 }: ImageWithTextProps) {
   return (
     <section className="px-6 py-16 md:py-24">
-      <Card className="mx-auto max-w-6xl p-0">
+      <div className="mx-auto flex max-w-6xl flex-col overflow-hidden rounded-xl bg-white ring-1 ring-black/10">
         <div
           className={cn(
             "flex flex-col",
@@ -49,7 +48,7 @@ export default function ImageWithText({
             <div className="space-y-4 text-zinc-700">{children}</div>
           </div>
         </div>
-      </Card>
+      </div>
     </section>
   );
 }

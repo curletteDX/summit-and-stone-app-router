@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Card } from "@/components/ui/card";
 
 interface BlogArticleIntroProps {
   title: string;
@@ -20,7 +19,7 @@ export default function BlogArticleIntro({
 }: BlogArticleIntroProps) {
   return (
     <li className="flex">
-      <Card className="group relative w-full gap-0 py-0 transition-shadow hover:shadow-md focus-within:ring-2 focus-within:ring-zinc-900">
+      <div className="group relative w-full flex flex-col overflow-hidden rounded-xl bg-white text-sm text-zinc-900 ring-1 ring-black/10 transition-shadow hover:shadow-md focus-within:ring-2 focus-within:ring-zinc-900">
         <div className="relative aspect-video w-full overflow-hidden">
           <Image
             src={imageUrl}
@@ -38,7 +37,7 @@ export default function BlogArticleIntro({
           </h3>
           <p className="line-clamp-3 text-sm text-zinc-600">{summary}</p>
         </div>
-      </Card>
+      </div>
     </li>
   );
 }

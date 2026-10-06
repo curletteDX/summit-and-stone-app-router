@@ -1,8 +1,6 @@
 import { Check, X } from "lucide-react";
 import Image from "next/image";
 
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
 interface ProductCardProps {
@@ -14,6 +12,9 @@ interface ProductCardProps {
   categories?: string[];
   available?: boolean;
 }
+
+const BADGE_CLASSES =
+  "inline-flex h-5 w-fit shrink-0 items-center justify-center gap-1 overflow-hidden whitespace-nowrap rounded-full px-2 py-0.5 text-xs font-medium [&>svg]:size-3";
 
 const categoryColors: Record<string, string> = {
   hiking: "bg-emerald-100 text-emerald-900",
@@ -37,7 +38,7 @@ export default function ProductCard({
 }: ProductCardProps) {
   return (
     <li className="flex">
-      <Card className="w-full gap-0 py-0 transition-shadow hover:shadow-xl">
+      <div className="w-full flex flex-col overflow-hidden rounded-xl bg-white text-sm text-zinc-900 ring-1 ring-black/10 transition-shadow hover:shadow-xl">
         <div className="relative aspect-square w-full overflow-hidden bg-zinc-100">
           <Image
             src={imageUrl}
@@ -49,20 +50,22 @@ export default function ProductCard({
           {categories.length > 0 && (
             <div className="absolute left-3 top-3 flex flex-wrap gap-1.5">
               {categories.map((category) => (
-                <Badge
+                <span
                   key={category}
                   className={cn(
+                    BADGE_CLASSES,
                     "capitalize",
                     categoryColors[category] ?? "bg-zinc-100 text-zinc-900",
                   )}
                 >
                   {category}
-                </Badge>
+                </span>
               ))}
             </div>
           )}
-          <Badge
+          <span
             className={cn(
+              BADGE_CLASSES,
               "absolute right-3 top-3",
               available
                 ? "bg-emerald-100 text-emerald-900"
@@ -71,9 +74,9 @@ export default function ProductCard({
           >
             {available ? <Check aria-hidden="true" /> : <X aria-hidden="true" />}
             {available ? "In Stock" : "Out of Stock"}
-          </Badge>
+          </span>
         </div>
-        <CardContent className="flex flex-1 flex-col gap-2 p-5">
+        <div className="flex flex-1 flex-col gap-2 p-5">
           <h3 className="line-clamp-2 text-lg font-bold text-zinc-900">
             {title}
           </h3>
@@ -89,8 +92,8 @@ export default function ProductCard({
               </span>
             )}
           </p>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
     </li>
   );
 }

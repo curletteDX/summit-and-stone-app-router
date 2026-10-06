@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-import { Card } from "@/components/ui/card";
 
 interface TopicCardProps {
   title: string;
@@ -21,7 +20,7 @@ export default function TopicCard({
 }: TopicCardProps) {
   return (
     <li className="flex">
-      <Card className="group relative w-full gap-0 py-0 transition-shadow hover:shadow-xl focus-within:ring-2 focus-within:ring-zinc-900">
+      <div className="group relative w-full flex flex-col overflow-hidden rounded-xl bg-white text-sm text-zinc-900 ring-1 ring-black/10 transition-shadow hover:shadow-xl focus-within:ring-2 focus-within:ring-zinc-900">
         <div className="relative aspect-[4/3] w-full overflow-hidden">
           <Image
             src={imageUrl}
@@ -49,7 +48,7 @@ export default function TopicCard({
             className="mt-1 size-5 shrink-0 text-zinc-400 transition-transform group-hover:translate-x-1 group-hover:text-zinc-900"
           />
         </div>
-      </Card>
+      </div>
     </li>
   );
 }

@@ -1,8 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 
-import { Button } from "@/components/ui/button";
-
 interface LatestArticlesProps {
   id?: string;
   heading: string;
@@ -27,14 +25,12 @@ export default function LatestArticles({
         <hr className="mb-8 border-zinc-200" />
         <ul className="grid grid-cols-1 gap-6 md:grid-cols-3">{children}</ul>
         <div className="mt-12 text-center">
-          <Button
-            size="lg"
-            nativeButton={false}
-            render={<Link href={viewAllHref} />}
-            className="h-12 px-10 text-base"
+          <Link
+            href={viewAllHref}
+            className="inline-flex h-12 items-center justify-center rounded-lg bg-zinc-900 px-10 text-base font-medium text-white transition-colors hover:bg-zinc-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900"
           >
             {viewAllText}
-          </Button>
+          </Link>
         </div>
       </div>
     </section>
