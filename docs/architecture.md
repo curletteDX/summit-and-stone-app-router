@@ -67,8 +67,6 @@ sequenceDiagram
   C-->>V: HTML
 ```
 
-![Sequence diagram of a page request, from visitor to HTML](./Flow-Diagram.png)
-
 **Teaching points**
 - The visitor never sees `/uniform/<code>`. It is an internal rewrite.
 - If Uniform has nothing at the path, the middleware returns the 404 page. A redirect set up in Uniform becomes a real redirect.
