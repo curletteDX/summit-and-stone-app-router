@@ -4,10 +4,12 @@ import type {
 } from "@uniformdev/next-app-router";
 import type { ComponentProps } from "@uniformdev/next-app-router/component";
 
+import HeroSection from "./HeroSection";
 import Page from "./Page";
 
 const componentMap: Record<string, ResolveComponentResult["component"]> = {
   page: Page,
+  heroSection: HeroSection,
 };
 
 const NotFoundComponent = ({ type }: ComponentProps) => (
