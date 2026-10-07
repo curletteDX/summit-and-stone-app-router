@@ -4,6 +4,7 @@ import HeroSection from "@/app/static/_components/HeroSection";
 import ImageWithText from "@/app/static/_components/ImageWithText";
 import LinkCard from "@/app/static/_components/LinkCard";
 import ProductCard from "@/app/static/_components/ProductCard";
+import { newsArticles } from "@/app/static/_data/news";
 
 // Every value on this page is hardcoded sample content.
 // Later in the course you will replace these with data from Uniform.
@@ -70,27 +71,6 @@ const products = [
     price: 799,
     categories: ["biking"],
     available: true,
-  },
-];
-
-const articles = [
-  {
-    title: "How to Plan Your First Alpine Sunrise Hike",
-    description: "Start before the stars fade and you will walk into one of the best views of your life. Here is how to prepare.",
-    imageUrl: photo("1506905925346-21bda4d32df4", 600),
-    imageAlt: "Sunrise above a sea of clouds with snowy peaks in the distance",
-  },
-  {
-    title: "Reading the Weather Before You Summit",
-    description: "Clouds, wind and pressure all tell a story. Learn the signs that say turn around, and the ones that say go.",
-    imageUrl: photo("1470071459604-3b5ec3a7fe05", 600),
-    imageAlt: "Low clouds drifting over a green cliff at sunrise",
-  },
-  {
-    title: "Campfire Cooking: Three Easy One-Pot Meals",
-    description: "Lightweight, filling and nearly impossible to burn. These dinners will make you the hero of the campsite.",
-    imageUrl: photo("1478131143081-80f7f84ca84d", 600),
-    imageAlt: "A group sitting around a campfire at dusk",
   },
 ];
 
@@ -174,11 +154,14 @@ export default function StaticHomePage() {
         linkHref="/static/article"
         linkText="See all News & Views"
       >
-        {articles.map((article) => (
+        {newsArticles.map((article) => (
           <LinkCard
-            key={article.title}
-            {...article}
-            href="/static/article"
+            key={article.slug}
+            title={article.title}
+            description={article.summary}
+            imageUrl={photo(article.image.id, 600)}
+            imageAlt={article.image.alt}
+            href={`/static/news/${article.slug}`}
             imageRatio="wide"
           />
         ))}
