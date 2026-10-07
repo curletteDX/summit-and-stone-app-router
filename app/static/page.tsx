@@ -1,12 +1,9 @@
-import BlogArticleIntro from "@/app/static/_components/BlogArticleIntro";
+import CardGrid from "@/app/static/_components/CardGrid";
 import ContentBlock from "@/app/static/_components/ContentBlock";
-import FeaturedProducts from "@/app/static/_components/FeaturedProducts";
 import HeroSection from "@/app/static/_components/HeroSection";
 import ImageWithText from "@/app/static/_components/ImageWithText";
-import LatestArticles from "@/app/static/_components/LatestArticles";
+import LinkCard from "@/app/static/_components/LinkCard";
 import ProductCard from "@/app/static/_components/ProductCard";
-import TopicCard from "@/app/static/_components/TopicCard";
-import TopicCards from "@/app/static/_components/TopicCards";
 
 // Every value on this page is hardcoded sample content.
 // Later in the course you will replace these with data from Uniform.
@@ -79,19 +76,19 @@ const products = [
 const articles = [
   {
     title: "How to Plan Your First Alpine Sunrise Hike",
-    summary: "Start before the stars fade and you will walk into one of the best views of your life. Here is how to prepare.",
+    description: "Start before the stars fade and you will walk into one of the best views of your life. Here is how to prepare.",
     imageUrl: photo("1506905925346-21bda4d32df4", 600),
     imageAlt: "Sunrise above a sea of clouds with snowy peaks in the distance",
   },
   {
     title: "Reading the Weather Before You Summit",
-    summary: "Clouds, wind and pressure all tell a story. Learn the signs that say turn around, and the ones that say go.",
+    description: "Clouds, wind and pressure all tell a story. Learn the signs that say turn around, and the ones that say go.",
     imageUrl: photo("1470071459604-3b5ec3a7fe05", 600),
     imageAlt: "Low clouds drifting over a green cliff at sunrise",
   },
   {
     title: "Campfire Cooking: Three Easy One-Pot Meals",
-    summary: "Lightweight, filling and nearly impossible to burn. These dinners will make you the hero of the campsite.",
+    description: "Lightweight, filling and nearly impossible to burn. These dinners will make you the hero of the campsite.",
     imageUrl: photo("1478131143081-80f7f84ca84d", 600),
     imageAlt: "A group sitting around a campfire at dusk",
   },
@@ -141,35 +138,51 @@ export default function StaticHomePage() {
         </p>
       </ImageWithText>
 
-      <TopicCards id="topics" heading="Explore by Adventure">
+      <CardGrid
+        id="topics"
+        heading="Explore by Adventure"
+        columns="3"
+        containerWidth="default"
+        background="plain"
+      >
         {topics.map((topic) => (
-          <TopicCard key={topic.title} {...topic} />
+          <LinkCard key={topic.title} {...topic} imageRatio="standard" showArrow />
         ))}
-      </TopicCards>
+      </CardGrid>
 
-      <FeaturedProducts
+      <CardGrid
         id="featured-products"
+        eyebrow="Featured Collection"
         heading="Our Top Picks"
         subheading="Explore a curated selection of premium outdoor gear, chosen by our testers."
+        columns="4"
+        containerWidth="wide"
+        background="gradient"
+        headingAlign="center"
       >
         {products.map((product) => (
           <ProductCard key={product.title} {...product} />
         ))}
-      </FeaturedProducts>
+      </CardGrid>
 
-      <LatestArticles
+      <CardGrid
         id="news"
         heading="Latest News and Views"
-        viewAllHref="/static/article"
+        columns="3"
+        containerWidth="narrow"
+        showDivider
+        linkHref="/static/article"
+        linkText="See all News & Views"
       >
         {articles.map((article) => (
-          <BlogArticleIntro
+          <LinkCard
             key={article.title}
             {...article}
             href="/static/article"
+            imageRatio="wide"
           />
         ))}
-      </LatestArticles>
+      </CardGrid>
     </>
   );
 }
