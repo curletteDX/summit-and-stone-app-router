@@ -1,0 +1,95 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: imageWithText
+name: Image With Text
+icon: screen
+parameters:
+  - id: heading
+    name: Heading
+    type: text
+    typeConfig:
+      required: true
+    localizable: true
+  - id: subheading
+    name: Subheading
+    type: text
+    localizable: true
+  - id: image
+    name: Image
+    type: asset
+    guidance: Landscape photo, ideally 4:3.
+    typeConfig:
+      required: true
+      allowedTypes:
+        - image
+  - id: imagePosition
+    name: Image Position
+    type: select
+    typeConfig:
+      options:
+        - text: Left
+          value: left
+        - text: Right
+          value: right
+  - id: content
+    name: Content
+    type: richText
+    typeConfig:
+      elements:
+        builtIn:
+          - h1
+          - h2
+          - h3
+          - h4
+          - h5
+          - h6
+          - unorderedList
+          - orderedList
+          - link
+          - quote
+          - code
+          - table
+          - asset
+          - variable
+      required: false
+      formatting:
+        builtIn:
+          - bold
+          - italic
+          - underline
+          - strikethrough
+          - code
+          - superscript
+          - subscript
+      elementsConfig:
+        link:
+          enableAnchor: true
+        asset:
+          allowedTypes:
+            - image
+    localizable: true
+  - id: link
+    name: Link
+    type: link
+    typeConfig:
+      linkTypes:
+        tel: false
+        email: false
+      linkAttributes:
+        enableAnchor: true
+    localizable: true
+  - id: linkText
+    name: Link Text
+    type: text
+    guidance: Short call-to-action label for the link, 2-4 words.
+    localizable: true
+description: >-
+  Side-by-side layout pairing an image with a heading, rich text and an optional
+  link.
+useTeamPermissions: true
+slots: []
+titleParameter: heading
+thumbnailParameter: image
+canBeComposition: false
+created: '2026-10-07T11:09:21.31702+00:00'
+updated: '2026-10-07T11:09:21.31702+00:00'

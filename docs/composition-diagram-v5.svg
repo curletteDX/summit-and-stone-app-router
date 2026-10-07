@@ -1,0 +1,247 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2200" height="1720" viewBox="0 0 2200 1720" font-family="Inter, Helvetica, Arial, sans-serif">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#7a8797"/></marker></defs>
+<rect x="0" y="0" width="2200" height="1720" rx="0" fill="#ffffff" stroke="none" stroke-width="0" opacity="1"/>
+<text x="40" y="58" font-size="36" font-weight="700" fill="#1f2933" text-anchor="start" >The Home composition: one page, two views</text>
+<text x="40" y="92" font-size="18" font-weight="400" fill="#52606d" text-anchor="start" >Left: what a visitor sees. Right: what Uniform stores. Colors match between the two.</text>
+<text x="40" y="132" font-size="22" font-weight="700" fill="#1f2933" text-anchor="start" >1. The Composition (Page)</text>
+<text x="800" y="132" font-size="22" font-weight="700" fill="#1f2933" text-anchor="start" >2. Inside the composition</text>
+<rect x="40" y="150" width="700" height="1530" rx="14" fill="#ffffff" stroke="#c3ccd6" stroke-width="2" opacity="1"/>
+<rect x="40" y="150" width="700" height="38" rx="14" fill="#d9e0e8" stroke="#c3ccd6" stroke-width="2" opacity="1"/>
+<rect x="40" y="174" width="700" height="14" rx="0" fill="#d9e0e8" stroke="none" stroke-width="0" opacity="1"/>
+<circle cx="62" cy="169" r="6" fill="#9aa5b1"/>
+<circle cx="82" cy="169" r="6" fill="#9aa5b1"/>
+<circle cx="102" cy="169" r="6" fill="#9aa5b1"/>
+<rect x="60" y="214" width="660" height="80" rx="10" fill="#2b8be0" stroke="#2b8be0" stroke-width="2" opacity="0.08"/>
+<rect x="60" y="214" width="660" height="80" rx="10" fill="none" stroke="#2b8be0" stroke-width="3" opacity="1"/>
+<rect x="74" y="200" width="208.39999999999998" height="28" rx="14.0" fill="#2b8be0" stroke="none" stroke-width="2" opacity="1"/>
+<text x="178.2" y="219.0" font-size="13" font-weight="600" fill="#fff" text-anchor="middle" >Header  (slot: header)</text>
+<rect x="84" y="248" width="34" height="34" rx="6" fill="#9aa5b1" stroke="none" stroke-width="0" opacity="1"/>
+<text x="128" y="271" font-size="16" font-weight="700" fill="#52606d" text-anchor="start" >Logo</text>
+<rect x="300" y="258" width="60" height="12" rx="6" fill="#c3ccd6" stroke="none" stroke-width="0" opacity="1"/>
+<rect x="372" y="258" width="60" height="12" rx="6" fill="#c3ccd6" stroke="none" stroke-width="0" opacity="1"/>
+<rect x="444" y="258" width="60" height="12" rx="6" fill="#c3ccd6" stroke="none" stroke-width="0" opacity="1"/>
+<rect x="580" y="246" width="116" height="36" rx="4" fill="none" stroke="#9aa5b1" stroke-width="2" opacity="1"/>
+<rect x="60" y="340" width="660" height="190" rx="10" fill="#5b6b7a" stroke="#5b6b7a" stroke-width="2" opacity="0.08"/>
+<rect x="60" y="340" width="660" height="190" rx="10" fill="none" stroke="#5b6b7a" stroke-width="3" opacity="1"/>
+<rect x="74" y="326" width="257.59999999999997" height="28" rx="14.0" fill="#5b6b7a" stroke="none" stroke-width="2" opacity="1"/>
+<text x="202.79999999999998" y="345.0" font-size="13" font-weight="600" fill="#fff" text-anchor="middle" >HeroSection  (slot: content)</text>
+<rect x="76" y="356" width="628" height="160" rx="0" fill="#d5dee9" stroke="none" stroke-width="0" opacity="1"/>
+<polygon points="76,480.8 251.84,391.2 390.0,444.0 553.28,375.2 704,468.0 704,516 76,516" fill="#8da0b5"/>
+<polygon points="251.84,391.2 214.16,413.6 264.4,405.6 295.79999999999995,416.8" fill="#ffffff"/>
+<polygon points="553.28,375.2 509.32,400.8 553.28,392.8 590.9599999999999,404.0" fill="#ffffff"/>
+<polygon points="76,490.4 358.6,477.6 704,493.6 704,516 76,516" fill="#86a76a"/>
+<rect x="76" y="356" width="628" height="160" rx="0" fill="#0b0b0c" stroke="none" stroke-width="0" opacity="0.45"/>
+<rect x="100" y="410" width="300" height="20" rx="4" fill="#ffffff" stroke="none" stroke-width="0" opacity="1"/>
+<rect x="100" y="440" width="220" height="20" rx="4" fill="#ffffff" stroke="none" stroke-width="0" opacity="1"/>
+<rect x="100" y="474" width="150" height="12" rx="6" fill="#ffffffaa" stroke="none" stroke-width="0" opacity="1"/>
+<rect x="550" y="470" width="110" height="30" rx="3" fill="#ffffff" stroke="none" stroke-width="0" opacity="1"/>
+<g transform="translate(0,230)">
+<rect x="60" y="340" width="660" height="170" rx="10" fill="#25b3a1" stroke="#25b3a1" stroke-width="2" opacity="0.08"/>
+<rect x="60" y="340" width="660" height="170" rx="10" fill="none" stroke="#25b3a1" stroke-width="3" opacity="1"/>
+<rect x="74" y="326" width="265.79999999999995" height="28" rx="14.0" fill="#25b3a1" stroke="none" stroke-width="2" opacity="1"/>
+<text x="206.89999999999998" y="345.0" font-size="13" font-weight="600" fill="#fff" text-anchor="middle" >ContentBlock  (slot: content)</text>
+<text x="84" y="392" font-size="15" font-weight="400" fill="#1f2933" text-anchor="start" >Today we design and test equipment for hikers, climbers and cyclists</text>
+<text x="84" y="418" font-size="15" font-weight="400" fill="#1f2933" text-anchor="start" >who care about quality, repairability and the places we all love to explore.</text>
+<text x="84" y="466" font-size="16" font-weight="500" fill="#3b5bdb" text-anchor="start" text-decoration="underline">Read our latest story</text>
+<rect x="60" y="550" width="660" height="320" rx="10" fill="#ec8a3d" stroke="#ec8a3d" stroke-width="2" opacity="0.08"/>
+<rect x="60" y="550" width="660" height="320" rx="10" fill="none" stroke="#ec8a3d" stroke-width="3" opacity="1"/>
+<rect x="74" y="536" width="274.0" height="28" rx="14.0" fill="#ec8a3d" stroke="none" stroke-width="2" opacity="1"/>
+<text x="211.0" y="555.0" font-size="13" font-weight="600" fill="#fff" text-anchor="middle" >ImageWithText  (slot: content)</text>
+<rect x="76" y="574" width="628" height="284" rx="12" fill="#ffffff" stroke="#c3ccd6" stroke-width="2" opacity="1"/>
+<rect x="78" y="576" width="300" height="280" rx="0" fill="#d5dee9" stroke="none" stroke-width="0" opacity="1"/>
+<polygon points="78,794.4 162.0,637.6 228.0,730.0 306.0,609.6 378,772.0 378,856 78,856" fill="#8da0b5"/>
+<polygon points="162.0,637.6 144.0,676.8 168.0,662.8 183.0,682.4" fill="#ffffff"/>
+<polygon points="306.0,609.6 285.0,654.4 306.0,640.4 324.0,660.0" fill="#ffffff"/>
+<polygon points="78,811.2 213.0,788.8 378,816.8 378,856 78,856" fill="#86a76a"/>
+<rect x="222.0" y="738.4" width="16" height="40" rx="3" fill="#b23a3a" stroke="none" stroke-width="0" opacity="1"/>
+<rect x="224.0" y="776.4" width="12" height="30" rx="2" fill="#c9b38a" stroke="none" stroke-width="0" opacity="1"/>
+<rect x="168.0" y="760.8" width="12" height="30" rx="3" fill="#4a4f57" stroke="none" stroke-width="0" opacity="1"/>
+<rect x="169.0" y="788.8" width="10" height="22" rx="2" fill="#c9b38a" stroke="none" stroke-width="0" opacity="1"/>
+<text x="394" y="630" font-size="22" font-weight="800" fill="#1f2933" text-anchor="start" >Gear that goes</text>
+<text x="394" y="658" font-size="22" font-weight="800" fill="#1f2933" text-anchor="start" >the distance</text>
+<text x="394" y="688" font-size="13" font-weight="400" fill="#52606d" text-anchor="start" >Tested by guides, trusted by</text>
+<text x="394" y="705" font-size="13" font-weight="400" fill="#52606d" text-anchor="start" >weekend wanderers</text>
+<text x="394" y="734" font-size="12" font-weight="400" fill="#1f2933" text-anchor="start" >Every product spends a season in</text>
+<text x="394" y="750" font-size="12" font-weight="400" fill="#1f2933" text-anchor="start" >the field before it reaches our</text>
+<text x="394" y="766" font-size="12" font-weight="400" fill="#1f2933" text-anchor="start" >shelves. Our testers log hundreds</text>
+<text x="394" y="782" font-size="12" font-weight="400" fill="#1f2933" text-anchor="start" >of miles in rain, wind and sun.</text>
+<text x="394" y="808" font-size="12" font-weight="400" fill="#1f2933" text-anchor="start" >The result is gear you can rely on</text>
+<text x="394" y="824" font-size="12" font-weight="400" fill="#1f2933" text-anchor="start" >when the weather turns.</text>
+<rect x="60" y="910" width="660" height="370" rx="10" fill="#c032d8" stroke="#c032d8" stroke-width="2" opacity="0.08"/>
+<rect x="60" y="910" width="660" height="370" rx="10" fill="none" stroke="#c032d8" stroke-width="3" opacity="1"/>
+<rect x="74" y="896" width="249.39999999999998" height="28" rx="14.0" fill="#c032d8" stroke="none" stroke-width="2" opacity="1"/>
+<text x="198.7" y="915.0" font-size="13" font-weight="600" fill="#fff" text-anchor="middle" >TopicCards  (slot: content)</text>
+<text x="390.0" y="962" font-size="22" font-weight="800" fill="#1f2933" text-anchor="middle" >Explore by Adventure</text>
+<rect x="76.0" y="1008" width="198.66666666666666" height="250" rx="8" fill="#ffffff" stroke="#1f7a8c" stroke-width="2.5" opacity="1"/>
+<rect x="84.0" y="1018" width="182.66666666666666" height="170" rx="0" fill="#d5dee9" stroke="none" stroke-width="0" opacity="1"/>
+<polygon points="84.0,1150.6 135.14666666666668,1055.4 175.33333333333331,1111.5 222.82666666666665,1038.4 266.66666666666663,1137.0 266.66666666666663,1188 84.0,1188" fill="#8da0b5"/>
+<polygon points="135.14666666666668,1055.4 124.18666666666667,1079.2 138.8,1070.7 147.93333333333334,1082.6" fill="#ffffff"/>
+<polygon points="222.82666666666665,1038.4 210.03999999999996,1065.6 222.82666666666665,1057.1 233.78666666666666,1069.0" fill="#ffffff"/>
+<polygon points="84.0,1160.8 166.2,1147.2 266.66666666666663,1164.2 266.66666666666663,1188 84.0,1188" fill="#86a76a"/>
+<text x="175.33333333333331" y="1226" font-size="16" font-weight="700" fill="#1f2933" text-anchor="middle" >Hiking</text>
+<rect x="113.33333333333331" y="994" width="124" height="28" rx="14.0" fill="#1f7a8c" stroke="none" stroke-width="2" opacity="1"/>
+<text x="175.33333333333331" y="1013.0" font-size="12" font-weight="600" fill="#fff" text-anchor="middle" >TopicCard</text>
+<rect x="290.66666666666663" y="1008" width="198.66666666666666" height="250" rx="8" fill="#ffffff" stroke="#1f7a8c" stroke-width="2.5" opacity="1"/>
+<rect x="298.66666666666663" y="1018" width="182.66666666666666" height="170" rx="0" fill="#d5dee9" stroke="none" stroke-width="0" opacity="1"/>
+<polygon points="298.66666666666663,1150.6 349.8133333333333,1055.4 389.99999999999994,1111.5 437.4933333333333,1038.4 481.33333333333326,1137.0 481.33333333333326,1188 298.66666666666663,1188" fill="#8da0b5"/>
+<polygon points="349.8133333333333,1055.4 338.8533333333333,1079.2 353.46666666666664,1070.7 362.59999999999997,1082.6" fill="#ffffff"/>
+<polygon points="437.4933333333333,1038.4 424.7066666666666,1065.6 437.4933333333333,1057.1 448.45333333333326,1069.0" fill="#ffffff"/>
+<polygon points="298.66666666666663,1160.8 380.8666666666666,1147.2 481.33333333333326,1164.2 481.33333333333326,1188 298.66666666666663,1188" fill="#86a76a"/>
+<text x="389.99999999999994" y="1226" font-size="16" font-weight="700" fill="#1f2933" text-anchor="middle" >Climbing</text>
+<rect x="327.99999999999994" y="994" width="124" height="28" rx="14.0" fill="#1f7a8c" stroke="none" stroke-width="2" opacity="1"/>
+<text x="389.99999999999994" y="1013.0" font-size="12" font-weight="600" fill="#fff" text-anchor="middle" >TopicCard</text>
+<rect x="505.3333333333333" y="1008" width="198.66666666666666" height="250" rx="8" fill="#ffffff" stroke="#1f7a8c" stroke-width="2.5" opacity="1"/>
+<rect x="513.3333333333333" y="1018" width="182.66666666666666" height="170" rx="0" fill="#d5dee9" stroke="none" stroke-width="0" opacity="1"/>
+<polygon points="513.3333333333333,1150.6 564.4799999999999,1055.4 604.6666666666666,1111.5 652.1599999999999,1038.4 695.9999999999999,1137.0 695.9999999999999,1188 513.3333333333333,1188" fill="#8da0b5"/>
+<polygon points="564.4799999999999,1055.4 553.52,1079.2 568.1333333333332,1070.7 577.2666666666665,1082.6" fill="#ffffff"/>
+<polygon points="652.1599999999999,1038.4 639.3733333333332,1065.6 652.1599999999999,1057.1 663.1199999999999,1069.0" fill="#ffffff"/>
+<polygon points="513.3333333333333,1160.8 595.5333333333333,1147.2 695.9999999999999,1164.2 695.9999999999999,1188 513.3333333333333,1188" fill="#86a76a"/>
+<text x="604.6666666666666" y="1226" font-size="16" font-weight="700" fill="#1f2933" text-anchor="middle" >Cycling</text>
+<rect x="542.6666666666666" y="994" width="124" height="28" rx="14.0" fill="#1f7a8c" stroke="none" stroke-width="2" opacity="1"/>
+<text x="604.6666666666666" y="1013.0" font-size="12" font-weight="600" fill="#fff" text-anchor="middle" >TopicCard</text>
+<rect x="60" y="1320" width="660" height="80" rx="10" fill="#d9485d" stroke="#d9485d" stroke-width="2" opacity="0.08"/>
+<rect x="60" y="1320" width="660" height="80" rx="10" fill="none" stroke="#d9485d" stroke-width="3" opacity="1"/>
+<rect x="74" y="1306" width="208.39999999999998" height="28" rx="14.0" fill="#d9485d" stroke="none" stroke-width="2" opacity="1"/>
+<text x="178.2" y="1325.0" font-size="13" font-weight="600" fill="#fff" text-anchor="middle" >Footer  (slot: footer)</text>
+<rect x="84" y="1366" width="80" height="12" rx="6" fill="#c3ccd6" stroke="none" stroke-width="0" opacity="1"/>
+<rect x="180" y="1366" width="80" height="12" rx="6" fill="#c3ccd6" stroke="none" stroke-width="0" opacity="1"/>
+<rect x="276" y="1366" width="80" height="12" rx="6" fill="#c3ccd6" stroke="none" stroke-width="0" opacity="1"/>
+<text x="696" y="1377" font-size="14" font-weight="500" fill="#52606d" text-anchor="end" >© Footer text</text>
+</g>
+<rect x="800" y="214" width="1360" height="846" rx="14" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="2" stroke-dasharray="8 6" opacity="1"/>
+<text x="824" y="246" font-size="18" font-weight="700" fill="#52606d" text-anchor="start" >Everything stored in the composition</text>
+<rect x="1360" y="150" width="220" height="52" rx="26.0" fill="#f1c54b" stroke="none" stroke-width="2" opacity="1"/>
+<text x="1470.0" y="181.0" font-size="15" font-weight="600" fill="#1f2933" text-anchor="middle" >Project map node: /</text>
+<path d="M1470,202 L1470,258" fill="none" stroke="#7a8797" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="1381.0" y="219" width="198" height="24" rx="4" fill="#fff" stroke="none" stroke-width="0" opacity="1"/>
+<text x="1480" y="237" font-size="14" font-weight="600" fill="#52606d" text-anchor="middle" >resolves to composition</text>
+<rect x="1330" y="258" width="280" height="86" rx="10" fill="#7a8797" stroke="none" stroke-width="0" opacity="1"/>
+<text x="1470" y="290" font-size="16" font-weight="700" fill="#fff" text-anchor="middle" >Composition: Home</text>
+<text x="1470" y="316" font-size="16" font-weight="400" fill="#fff" text-anchor="middle" >URL param: slug = /</text>
+<rect x="830" y="404" width="180" height="46" rx="23.0" fill="#ffffff" stroke="#7a8797" stroke-width="2" stroke-dasharray="6 4" opacity="1"/>
+<text x="920.0" y="432.0" font-size="15" font-weight="600" fill="#7a8797" text-anchor="middle" >slot: header</text>
+<path d="M1470,344 L1470,374 L920,374 L920,404" fill="none" stroke="#7a8797" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="1380" y="404" width="180" height="46" rx="23.0" fill="#ffffff" stroke="#7a8797" stroke-width="2" stroke-dasharray="6 4" opacity="1"/>
+<text x="1470.0" y="432.0" font-size="15" font-weight="600" fill="#7a8797" text-anchor="middle" >slot: content</text>
+<path d="M1470,344 L1470,404" fill="none" stroke="#7a8797" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="1930" y="404" width="180" height="46" rx="23.0" fill="#ffffff" stroke="#7a8797" stroke-width="2" stroke-dasharray="6 4" opacity="1"/>
+<text x="2020.0" y="432.0" font-size="15" font-weight="600" fill="#7a8797" text-anchor="middle" >slot: footer</text>
+<path d="M1470,344 L1470,374 L2020,374 L2020,404" fill="none" stroke="#7a8797" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="820" y="540" width="200" height="206" rx="10" fill="#2b8be0" stroke="none" stroke-width="0" opacity="1"/>
+<text x="920" y="572" font-size="19" font-weight="800" fill="#fff" text-anchor="middle" >Header</text>
+<text x="920" y="596" font-size="13" font-weight="600" fill="#ffffffcc" text-anchor="middle" >parameters</text>
+<text x="920" y="620" font-size="14" font-weight="400" fill="#fff" text-anchor="middle" >logo</text>
+<text x="920" y="641" font-size="14" font-weight="400" fill="#fff" text-anchor="middle" >navItems</text>
+<text x="920" y="662" font-size="14" font-weight="400" fill="#fff" text-anchor="middle" >ctaText</text>
+<text x="920" y="683" font-size="14" font-weight="400" fill="#fff" text-anchor="middle" >ctaLink</text>
+<rect x="1040" y="540" width="200" height="206" rx="10" fill="#5b6b7a" stroke="none" stroke-width="0" opacity="1"/>
+<text x="1140" y="572" font-size="19" font-weight="800" fill="#fff" text-anchor="middle" >HeroSection</text>
+<text x="1140" y="596" font-size="13" font-weight="600" fill="#ffffffcc" text-anchor="middle" >parameters</text>
+<text x="1140" y="620" font-size="14" font-weight="400" fill="#fff" text-anchor="middle" >title</text>
+<text x="1140" y="641" font-size="14" font-weight="400" fill="#fff" text-anchor="middle" >description</text>
+<text x="1140" y="662" font-size="14" font-weight="400" fill="#fff" text-anchor="middle" >image</text>
+<text x="1140" y="683" font-size="14" font-weight="400" fill="#fff" text-anchor="middle" >imageAlt</text>
+<text x="1140" y="704" font-size="14" font-weight="400" fill="#fff" text-anchor="middle" >ctaText</text>
+<text x="1140" y="725" font-size="14" font-weight="400" fill="#fff" text-anchor="middle" >ctaLink</text>
+<rect x="1260" y="540" width="200" height="206" rx="10" fill="#25b3a1" stroke="none" stroke-width="0" opacity="1"/>
+<text x="1360" y="572" font-size="19" font-weight="800" fill="#fff" text-anchor="middle" >ContentBlock</text>
+<text x="1360" y="596" font-size="13" font-weight="600" fill="#ffffffcc" text-anchor="middle" >parameters</text>
+<text x="1360" y="620" font-size="14" font-weight="400" fill="#fff" text-anchor="middle" >body</text>
+<text x="1360" y="641" font-size="14" font-weight="400" fill="#fff" text-anchor="middle" >linkText</text>
+<text x="1360" y="662" font-size="14" font-weight="400" fill="#fff" text-anchor="middle" >linkUrl</text>
+<rect x="1480" y="540" width="200" height="206" rx="10" fill="#ec8a3d" stroke="none" stroke-width="0" opacity="1"/>
+<text x="1580" y="572" font-size="19" font-weight="800" fill="#fff" text-anchor="middle" >ImageWithText</text>
+<text x="1580" y="596" font-size="13" font-weight="600" fill="#ffffffcc" text-anchor="middle" >parameters</text>
+<text x="1580" y="620" font-size="14" font-weight="400" fill="#fff" text-anchor="middle" >title</text>
+<text x="1580" y="641" font-size="14" font-weight="400" fill="#fff" text-anchor="middle" >subtitle</text>
+<text x="1580" y="662" font-size="14" font-weight="400" fill="#fff" text-anchor="middle" >body</text>
+<text x="1580" y="683" font-size="14" font-weight="400" fill="#fff" text-anchor="middle" >image</text>
+<text x="1580" y="704" font-size="14" font-weight="400" fill="#fff" text-anchor="middle" >imageAlt</text>
+<text x="1580" y="725" font-size="14" font-weight="400" fill="#fff" text-anchor="middle" >imagePosition</text>
+<rect x="1700" y="540" width="200" height="206" rx="10" fill="#c032d8" stroke="none" stroke-width="0" opacity="1"/>
+<text x="1800" y="572" font-size="19" font-weight="800" fill="#fff" text-anchor="middle" >TopicCards</text>
+<text x="1800" y="596" font-size="13" font-weight="600" fill="#ffffffcc" text-anchor="middle" >parameters</text>
+<text x="1800" y="620" font-size="14" font-weight="400" fill="#fff" text-anchor="middle" >heading</text>
+<text x="1800" y="728" font-size="13" font-weight="600" fill="#ffffffdd" text-anchor="middle" font-style="italic">child slot: cards</text>
+<rect x="1920" y="540" width="200" height="206" rx="10" fill="#d9485d" stroke="none" stroke-width="0" opacity="1"/>
+<text x="2020" y="572" font-size="19" font-weight="800" fill="#fff" text-anchor="middle" >Footer</text>
+<text x="2020" y="596" font-size="13" font-weight="600" fill="#ffffffcc" text-anchor="middle" >parameters</text>
+<text x="2020" y="620" font-size="14" font-weight="400" fill="#fff" text-anchor="middle" >links</text>
+<text x="2020" y="641" font-size="14" font-weight="400" fill="#fff" text-anchor="middle" >copyrightText</text>
+<path d="M920,450 L920,540" fill="none" stroke="#7a8797" stroke-width="2.5" marker-end="url(#ah)"/>
+<path d="M2020,450 L2020,540" fill="none" stroke="#7a8797" stroke-width="2.5" marker-end="url(#ah)"/>
+<path d="M1470,450 L1470,490 L1140,490 L1140,540" fill="none" stroke="#7a8797" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="1129.0" y="487" width="22" height="24" rx="4" fill="#fff" stroke="none" stroke-width="0" opacity="1"/>
+<text x="1140" y="505" font-size="14" font-weight="600" fill="#52606d" text-anchor="middle" >1</text>
+<path d="M1470,450 L1470,490 L1360,490 L1360,540" fill="none" stroke="#7a8797" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="1349.0" y="487" width="22" height="24" rx="4" fill="#fff" stroke="none" stroke-width="0" opacity="1"/>
+<text x="1360" y="505" font-size="14" font-weight="600" fill="#52606d" text-anchor="middle" >2</text>
+<path d="M1470,450 L1470,490 L1580,490 L1580,540" fill="none" stroke="#7a8797" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="1569.0" y="487" width="22" height="24" rx="4" fill="#fff" stroke="none" stroke-width="0" opacity="1"/>
+<text x="1580" y="505" font-size="14" font-weight="600" fill="#52606d" text-anchor="middle" >3</text>
+<path d="M1470,450 L1470,490 L1800,490 L1800,540" fill="none" stroke="#7a8797" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="1789.0" y="487" width="22" height="24" rx="4" fill="#fff" stroke="none" stroke-width="0" opacity="1"/>
+<text x="1800" y="505" font-size="14" font-weight="600" fill="#52606d" text-anchor="middle" >4</text>
+<path d="M1800,746 L1800,776" fill="none" stroke="#7a8797" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="1710" y="776" width="180" height="40" rx="20.0" fill="#ffffff" stroke="#7a8797" stroke-width="2" stroke-dasharray="6 4" opacity="1"/>
+<text x="1800.0" y="801.0" font-size="15" font-weight="600" fill="#7a8797" text-anchor="middle" >slot: cards</text>
+<rect x="1559" y="846" width="150" height="120" rx="10" fill="#1f7a8c" stroke="none" stroke-width="0" opacity="1"/>
+<text x="1634" y="874" font-size="15" font-weight="800" fill="#fff" text-anchor="middle" >TopicCard</text>
+<text x="1634" y="900" font-size="13" font-weight="400" fill="#fff" text-anchor="middle" >image</text>
+<text x="1634" y="919" font-size="13" font-weight="400" fill="#fff" text-anchor="middle" >title</text>
+<text x="1634" y="938" font-size="13" font-weight="400" fill="#fff" text-anchor="middle" >link</text>
+<path d="M1800,816 L1800,831 L1634,831 L1634,846" fill="none" stroke="#7a8797" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="1725" y="846" width="150" height="120" rx="10" fill="#1f7a8c" stroke="none" stroke-width="0" opacity="1"/>
+<text x="1800" y="874" font-size="15" font-weight="800" fill="#fff" text-anchor="middle" >TopicCard</text>
+<text x="1800" y="900" font-size="13" font-weight="400" fill="#fff" text-anchor="middle" >image</text>
+<text x="1800" y="919" font-size="13" font-weight="400" fill="#fff" text-anchor="middle" >title</text>
+<text x="1800" y="938" font-size="13" font-weight="400" fill="#fff" text-anchor="middle" >link</text>
+<path d="M1800,816 L1800,831 L1800,831 L1800,846" fill="none" stroke="#7a8797" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="1891" y="846" width="150" height="120" rx="10" fill="#1f7a8c" stroke="none" stroke-width="0" opacity="1"/>
+<text x="1966" y="874" font-size="15" font-weight="800" fill="#fff" text-anchor="middle" >TopicCard</text>
+<text x="1966" y="900" font-size="13" font-weight="400" fill="#fff" text-anchor="middle" >image</text>
+<text x="1966" y="919" font-size="13" font-weight="400" fill="#fff" text-anchor="middle" >title</text>
+<text x="1966" y="938" font-size="13" font-weight="400" fill="#fff" text-anchor="middle" >link</text>
+<path d="M1800,816 L1800,831 L1966,831 L1966,846" fill="none" stroke="#7a8797" stroke-width="2.5" marker-end="url(#ah)"/>
+<text x="824" y="1010" font-size="15" font-weight="400" fill="#52606d" text-anchor="start" >Slots are ordered lists: the order of children is the order they render. Slots can nest (cards inside TopicCards).</text>
+<text x="824" y="1036" font-size="15" font-weight="500" fill="#1f2933" text-anchor="start" font-family="ui-monospace, Menlo, monospace">Fetched by its URL param:  compositionClient.get({ slug: "/" })</text>
+<text x="1180" y="1036" font-size="1" font-weight="400" fill="#1f2933" text-anchor="start" ></text>
+<text x="824" y="1084" font-size="13" font-weight="400" fill="#52606d" text-anchor="start" font-style="italic">Header, HeroSection and Footer sit outside the screenshot, and all parameter names are illustrative: swap in your real ones.</text>
+<text x="800" y="1120" font-size="22" font-weight="700" fill="#1f2933" text-anchor="start" >3. One definition, many instances</text>
+<rect x="800" y="1150" width="380" height="330" rx="10" fill="#ffffff" stroke="#7a8797" stroke-width="3" opacity="1"/>
+<text x="990" y="1182" font-size="17" font-weight="800" fill="#1f2933" text-anchor="middle" >Component definition: ImageWithText</text>
+<text x="990" y="1204" font-size="13" font-weight="400" fill="#52606d" text-anchor="middle" >the schema, lives in the project</text>
+<text x="830" y="1238" font-size="16" font-weight="500" fill="#1f2933" text-anchor="start" >title: text</text>
+<text x="830" y="1268" font-size="16" font-weight="500" fill="#1f2933" text-anchor="start" >subtitle: text</text>
+<text x="830" y="1298" font-size="16" font-weight="500" fill="#1f2933" text-anchor="start" >body: rich text</text>
+<text x="830" y="1328" font-size="16" font-weight="500" fill="#1f2933" text-anchor="start" >image: asset</text>
+<text x="830" y="1358" font-size="16" font-weight="500" fill="#1f2933" text-anchor="start" >imageAlt: text</text>
+<text x="830" y="1388" font-size="16" font-weight="500" fill="#1f2933" text-anchor="start" >imagePosition: left | right</text>
+<rect x="1300" y="1150" width="440" height="150" rx="10" fill="#ec8a3d" stroke="none" stroke-width="0" opacity="1"/>
+<text x="1520" y="1182" font-size="15" font-weight="700" fill="#fff" text-anchor="middle" >ImageWithText instance in composition: Home</text>
+<text x="1520" y="1208" font-size="15" font-weight="400" fill="#fff" text-anchor="middle" >URL param: slug = /</text>
+<text x="1520" y="1234" font-size="15" font-weight="400" fill="#fff" text-anchor="middle" >title = Gear that goes the distance</text>
+<text x="1520" y="1260" font-size="15" font-weight="400" fill="#fff" text-anchor="middle" >imagePosition = left</text>
+<rect x="1300" y="1330" width="440" height="150" rx="10" fill="#ec8a3d" stroke="none" stroke-width="0" opacity="1"/>
+<text x="1520" y="1362" font-size="15" font-weight="700" fill="#fff" text-anchor="middle" >ImageWithText instance in composition: About</text>
+<text x="1520" y="1388" font-size="15" font-weight="400" fill="#fff" text-anchor="middle" >URL param: slug = /about</text>
+<text x="1520" y="1414" font-size="15" font-weight="400" fill="#fff" text-anchor="middle" >title = Built to be repaired</text>
+<text x="1520" y="1440" font-size="15" font-weight="400" fill="#fff" text-anchor="middle" >imagePosition = right</text>
+<rect x="1880" y="1225" width="280" height="160" rx="10" fill="#ffffff" stroke="#2b8be0" stroke-width="3" stroke-dasharray="8 5" opacity="1"/>
+<text x="2020" y="1265" font-size="16" font-weight="700" fill="#1f2933" text-anchor="middle" >ImageWithText.tsx</text>
+<text x="2020" y="1291" font-size="16" font-weight="400" fill="#1f2933" text-anchor="middle" >one React component</text>
+<text x="2020" y="1317" font-size="16" font-weight="400" fill="#1f2933" text-anchor="middle" >renders every ImageWithText</text>
+<text x="2020" y="1343" font-size="16" font-weight="400" fill="#1f2933" text-anchor="middle" >instance</text>
+<path d="M1180,1250 L1240,1250 L1240,1225 L1300,1225" fill="none" stroke="#7a8797" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="1189.0" y="1182" width="102" height="24" rx="4" fill="#fff" stroke="none" stroke-width="0" opacity="1"/>
+<text x="1240" y="1200" font-size="14" font-weight="600" fill="#52606d" text-anchor="middle" >instance of</text>
+<path d="M1180,1380 L1240,1380 L1240,1405 L1300,1405" fill="none" stroke="#7a8797" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="1189.0" y="1437" width="102" height="24" rx="4" fill="#fff" stroke="none" stroke-width="0" opacity="1"/>
+<text x="1240" y="1455" font-size="14" font-weight="600" fill="#52606d" text-anchor="middle" >instance of</text>
+<path d="M1740,1225 L1810,1225 L1810,1280 L1880,1280" fill="none" stroke="#7a8797" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="1759.0" y="1182" width="102" height="24" rx="4" fill="#fff" stroke="none" stroke-width="0" opacity="1"/>
+<text x="1810" y="1200" font-size="14" font-weight="600" fill="#52606d" text-anchor="middle" >rendered by</text>
+<path d="M1740,1405 L1810,1405 L1810,1330 L1880,1330" fill="none" stroke="#7a8797" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="1759.0" y="1437" width="102" height="24" rx="4" fill="#fff" stroke="none" stroke-width="0" opacity="1"/>
+<text x="1810" y="1455" font-size="14" font-weight="600" fill="#52606d" text-anchor="middle" >rendered by</text>
+</svg>

@@ -1,0 +1,213 @@
+composition:
+  _name: Home
+  _id: 106c4790-59d5-476e-ab31-36785c1d1278
+  _slug: ':locale'
+  type: page
+  slots:
+    content:
+      - _id: c0fb79f7-75c0-4487-bc90-58c8068e8760
+        type: heroSection
+        parameters:
+          image:
+            type: asset
+            locales:
+              en-US:
+                - _id: 155bfdd2-729f-455b-a88f-1d1bd9e3f267
+                  type: image
+                  fields:
+                    id:
+                      type: text
+                      value: 8f7a70bf-3fba-4da4-8670-552875659b2a
+                    url:
+                      value: >-
+                        https://img.uniform.global/p/jVG5Mp34SnOV6ejjJ5u57w/LN88C8fSR4GytePC-lZY-w-Hero-Banner.jpeg
+                      type: text
+                    file:
+                      type: file
+                      value: 5e450760-cbbc-4bda-b266-782af84adc9f
+                    size:
+                      value: 417913
+                      type: number
+                    title:
+                      type: text
+                      value: Hero banner
+                    width:
+                      value: 1600
+                      type: number
+                    height:
+                      value: 1067
+                      type: number
+                    mediaType:
+                      value: image/jpeg
+                      type: text
+                    focalPoint:
+                      value:
+                        x: 0.52
+                        'y': 0.5
+                      type: focalPoint
+                    description:
+                      type: text
+                      value: >-
+                        A sweeping mountain landscape with snow-capped peaks, a
+                        broad valley, winding waterways, evergreen forests, and
+                        a bright blue sky filled with clouds.
+                  _source: uniform-assets
+          title:
+            type: text
+            locales:
+              en-US: Hello Hero!
+          subtitle:
+            type: text
+            locales:
+              en-US: Hi there!
+      - _id: 2f85b287-1e46-49c8-b2f7-8533d9cf02c1
+        type: contentBlock
+        parameters:
+          link:
+            type: link
+            locales:
+              en-US:
+                path: '#'
+                type: url
+          content:
+            type: richText
+            locales:
+              en-US:
+                root:
+                  type: root
+                  version: 1
+                  children:
+                    - type: paragraph
+                      version: 1
+                      children:
+                        - text: 'Summit & Stone '
+                          type: text
+                          format: 1
+                          version: 1
+                        - text: >-
+                            started with two friends, one borrowed tent and a
+                            forecast that turned out to be wrong. We learned
+                            quickly which gear earns its place in your pack and
+                            which stays at home.
+                          type: text
+                          format: 0
+                          version: 1
+                      textFormat: 1
+                    - type: paragraph
+                      version: 1
+                      children:
+                        - text: >-
+                            Today we design and test equipment for hikers,
+                            climbers and cyclists who care about quality,
+                            repairability and the places we all love to explore.
+                          type: text
+                          format: 0
+                          version: 1
+          heading:
+            type: text
+            locales:
+              en-US: Built For the Trail Ahead
+          linkText:
+            type: text
+            locales:
+              en-US: Read more
+      - _id: 287b28e3-94b6-4589-9254-b087291d1166
+        type: imageWithText
+        parameters:
+          link:
+            type: link
+            locales:
+              en-US:
+                path: '#topics'
+                type: url
+          image:
+            type: asset
+            value:
+              - _id: 050d9fd6-ec41-4f2e-bf90-ff224cd135ff
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 8f7a70bf-3fba-4da4-8670-552875659b2a
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/jVG5Mp34SnOV6ejjJ5u57w/LN88C8fSR4GytePC-lZY-w-Hero-Banner.jpeg
+                    type: text
+                  size:
+                    value: 417913
+                    type: number
+                  title:
+                    type: text
+                    value: Hero banner
+                  width:
+                    value: 1600
+                    type: number
+                  height:
+                    value: 1067
+                    type: number
+                  mediaType:
+                    value: image/jpeg
+                    type: text
+                  focalPoint:
+                    value:
+                      x: 0.52
+                      'y': 0.5
+                    type: focalPoint
+                  description:
+                    type: text
+                    value: >-
+                      A sweeping mountain landscape with snow-capped peaks, a
+                      broad valley, winding waterways, evergreen forests, and a
+                      bright blue sky filled with clouds.
+                  file:
+                    type: file
+                    value: 5e450760-cbbc-4bda-b266-782af84adc9f
+                _source: uniform-assets
+          content:
+            type: richText
+            locales:
+              en-US:
+                root:
+                  type: root
+                  version: 1
+                  children:
+                    - type: paragraph
+                      version: 1
+                      children:
+                        - text: >-
+                            Every product spends a season in the field before it
+                            reaches our shelves. Our testers log hundreds of
+                            miles in rain, wind and sun, then tell us exactly
+                            what to fix.
+                          type: text
+                          format: 0
+                          version: 1
+                    - type: paragraph
+                      version: 1
+                      children:
+                        - text: >-
+                            The result is gear you can rely on when the weather
+                            turns and the trail gets long.
+                          type: text
+                          format: 0
+                          version: 1
+          heading:
+            type: text
+            locales:
+              en-US: Gear that goes the distance
+          linkText:
+            type: text
+            locales:
+              en-US: Explore our gear
+          subheading:
+            type: text
+            locales:
+              en-US: Tested by guides, trusted by weekend wanderers
+          imagePosition:
+            type: select
+            value: left
+  _locales:
+    - en-US
+created: '2026-10-05T11:08:20.351188+00:00'
+modified: '2026-10-07T11:09:48.894332+00:00'
+pattern: false

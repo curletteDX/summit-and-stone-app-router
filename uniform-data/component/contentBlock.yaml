@@ -1,0 +1,66 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: contentBlock
+name: Content Block
+icon: file-document
+parameters:
+  - id: heading
+    name: Heading
+    type: text
+    typeConfig:
+      required: true
+    localizable: true
+  - id: content
+    name: Content
+    type: richText
+    typeConfig:
+      elements:
+        builtIn:
+          - h1
+          - h2
+          - h3
+          - h4
+          - h5
+          - h6
+          - unorderedList
+          - orderedList
+          - link
+          - quote
+          - code
+          - table
+          - asset
+          - variable
+      required: false
+      formatting:
+        builtIn:
+          - bold
+          - italic
+      elementsConfig:
+        link:
+          enableAnchor: true
+        asset:
+          allowedTypes:
+            - image
+    localizable: true
+  - id: link
+    name: Link
+    type: link
+    typeConfig:
+      linkTypes:
+        tel: false
+        email: false
+      linkAttributes:
+        enableAnchor: true
+    localizable: true
+  - id: linkText
+    name: Link Text
+    type: text
+    guidance: Short call-to-action label for the link, 2-4 words.
+    localizable: true
+categoryId: d61bdc5d-c3ac-4ea1-bac8-7ced8a49f914
+useTeamPermissions: true
+slots: []
+titleParameter: heading
+canBeComposition: false
+created: '2026-10-07T08:19:32.355582+00:00'
+updated: '2026-10-07T08:28:10.630801+00:00'

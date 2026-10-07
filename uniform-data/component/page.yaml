@@ -1,0 +1,33 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: page
+name: Page
+icon: template
+parameters: []
+categoryId: e6f6fa95-da48-44fb-b7e0-674a16965a97
+useTeamPermissions: true
+slots:
+  - id: header
+    name: Header
+    allowedComponents: []
+    allowAllComponents: true
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: content
+    name: Content
+    allowedComponents:
+      - contentBlock
+      - heroSection
+      - imageWithText
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: footer
+    name: Footer
+    allowedComponents: []
+    allowAllComponents: true
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+canBeComposition: true
+created: '2026-10-05T11:01:26.55834+00:00'
+updated: '2026-10-07T11:09:25.289017+00:00'

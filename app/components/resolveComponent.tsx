@@ -4,12 +4,16 @@ import type {
 } from "@uniformdev/next-app-router";
 import type { ComponentProps } from "@uniformdev/next-app-router/component";
 
+import ContentBlock from "./ContentBlock";
 import HeroSection from "./HeroSection";
+import ImageWithText from "./ImageWithText";
 import Page from "./Page";
 
 const componentMap: Record<string, ResolveComponentResult["component"]> = {
   page: Page,
   heroSection: HeroSection,
+  contentBlock: ContentBlock,
+  imageWithText: ImageWithText,
 };
 
 const NotFoundComponent = ({ type }: ComponentProps) => (

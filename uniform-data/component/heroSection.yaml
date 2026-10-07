@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: heroSection
+name: Hero Section
+icon: image-text
+parameters:
+  - id: title
+    name: Title
+    type: text
+    guidance: Keep it less than 25 characters
+    helpText: Title of the Component
+    typeConfig:
+      required: true
+    localizable: true
+  - id: subtitle
+    name: Subtitle
+    type: text
+    guidance: Keep it to less than 50 characters
+    typeConfig: null
+    localizable: true
+  - id: image
+    name: Image
+    type: asset
+    typeConfig:
+      allowedTypes:
+        - image
+    localizable: true
+categoryId: 9352cf1f-5167-4d99-9e24-ecebea2047ee
+useTeamPermissions: true
+slots: []
+titleParameter: title
+thumbnailParameter: image
+canBeComposition: false
+created: '2026-10-05T11:07:37.823197+00:00'
+updated: '2026-10-05T11:07:37.823197+00:00'
