@@ -1,0 +1,143 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: newsArticle
+name: News Article
+icon: card
+parameters:
+  - id: introGroup
+    name: Intro
+    type: group
+    typeConfig:
+      childrenParams:
+        - title
+        - summary
+        - category
+        - authorName
+        - authorRole
+        - publishDate
+        - updatedDate
+        - readTimeMinutes
+        - thumbnail
+  - id: title
+    name: Title
+    type: text
+    guidance: Clear, specific news headline.
+    typeConfig:
+      required: true
+  - id: summary
+    name: Summary
+    type: text
+    guidance: One or two sentence summary of the article.
+    typeConfig:
+      required: true
+  - id: category
+    name: Category
+    type: text
+    guidance: Short category label, 1-2 words.
+    typeConfig:
+      required: true
+  - id: authorName
+    name: Author Name
+    type: text
+    typeConfig:
+      required: true
+  - id: authorRole
+    name: Author Role
+    type: text
+  - id: publishDate
+    name: Publish Date
+    type: date
+    typeConfig:
+      required: true
+  - id: updatedDate
+    name: Updated Date
+    type: date
+  - id: readTimeMinutes
+    name: Read Time Minutes
+    type: number
+    typeConfig:
+      min: 1
+  - id: thumbnail
+    name: Thumbnail
+    type: asset
+    typeConfig:
+      required: true
+      allowedTypes:
+        - image
+  - id: heroGroup
+    name: Hero
+    type: group
+    typeConfig:
+      childrenParams:
+        - image
+        - caption
+        - credit
+  - id: image
+    name: Image
+    type: asset
+    typeConfig:
+      required: true
+      allowedTypes:
+        - image
+  - id: caption
+    name: Caption
+    type: text
+  - id: credit
+    name: Credit
+    type: text
+  - id: bodyGroup
+    name: Body
+    type: group
+    typeConfig:
+      childrenParams:
+        - body
+        - tags
+  - id: body
+    name: Body
+    type: richText
+    typeConfig:
+      elements:
+        builtIn:
+          - h1
+          - h2
+          - h3
+          - h4
+          - h5
+          - h6
+          - unorderedList
+          - orderedList
+          - link
+          - quote
+          - code
+          - table
+          - asset
+          - variable
+      required: true
+      formatting:
+        builtIn:
+          - bold
+          - italic
+          - underline
+          - strikethrough
+          - code
+          - superscript
+          - subscript
+      elementsConfig:
+        asset:
+          allowedTypes:
+            - image
+  - id: tags
+    name: Tags
+    type: text
+    guidance: 'Comma-separated list of short tags, for example: hiking, safety, gear.'
+categoryId: 2a9fa6af-5c1d-496a-8105-394a87241075
+description: >-
+  Full news article page section with hero image, intro, byline, rich text body
+  and tags.
+useTeamPermissions: true
+slots: []
+titleParameter: title
+thumbnailParameter: thumbnail
+canBeComposition: false
+created: '2026-10-08T09:06:10.735349+00:00'
+updated: '2026-10-08T09:08:44.764507+00:00'

@@ -18,6 +18,7 @@ export default function HeroSection({
 }: ComponentProps<HeroParameters>) {
   const asset = flattenValues(image?.value, { toSingle: true });
   const imageUrl = asset?.url;
+  
   // Keep the subtitle in the DOM while editing so authors can click into it,
   // but hide the empty element for visitors.
   const showSubtitle =

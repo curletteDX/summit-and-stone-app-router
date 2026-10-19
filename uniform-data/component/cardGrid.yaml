@@ -1,0 +1,100 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: cardGrid
+name: Card Grid
+icon: screen
+parameters:
+  - id: eyebrow
+    name: Eyebrow
+    type: text
+    guidance: Short badge label above the heading, 2-3 words.
+    localizable: true
+  - id: heading
+    name: Heading
+    type: text
+    typeConfig:
+      required: true
+    localizable: true
+  - id: subheading
+    name: Subheading
+    type: text
+    guidance: One sentence supporting the heading.
+    localizable: true
+  - id: link
+    name: Link
+    type: link
+    typeConfig:
+      linkTypes:
+        tel: false
+        email: false
+    localizable: true
+  - id: linkText
+    name: Link Text
+    type: text
+    guidance: Short call-to-action label, 2-4 words.
+    localizable: true
+  - id: columns
+    name: Columns
+    type: select
+    typeConfig:
+      options:
+        - text: 2 Columns
+          value: '2'
+        - text: 3 Columns
+          value: '3'
+        - text: 4 Columns
+          value: '4'
+  - id: background
+    name: Background
+    type: select
+    typeConfig:
+      options:
+        - text: Plain
+          value: plain
+        - text: Subtle
+          value: subtle
+        - text: Gradient
+          value: gradient
+  - id: containerWidth
+    name: Container Width
+    type: select
+    typeConfig:
+      options:
+        - text: Narrow
+          value: narrow
+        - text: Default
+          value: default
+        - text: Wide
+          value: wide
+  - id: headingAlign
+    name: Heading Alignment
+    type: select
+    typeConfig:
+      options:
+        - text: Center
+          value: center
+        - text: Left
+          value: left
+  - id: showDivider
+    name: Show Divider
+    type: checkbox
+  - id: sectionId
+    name: Section ID
+    type: text
+description: >-
+  Section with a heading and a responsive grid of cards, with an optional footer
+  link.
+useTeamPermissions: true
+slots:
+  - id: cards
+    name: Cards
+    minComponents: 1
+    allowedComponents:
+      - linkCard
+      - $loop
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: true
+titleParameter: eyebrow
+canBeComposition: false
+created: '2026-10-07T13:43:55.54638+00:00'
+updated: '2026-10-08T17:01:41.089951+00:00'

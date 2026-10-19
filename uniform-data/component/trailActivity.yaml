@@ -1,0 +1,33 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: trailActivity
+name: Trail Activity
+icon: screen
+parameters:
+  - id: label
+    name: Label
+    type: text
+    guidance: Do not type here. Connect to the activity label from the loop item.
+  - id: totalTrails
+    name: Total Trails
+    type: text
+    guidance: Do not type here. Connect to the activity total trails from the loop item.
+  - id: openTrails
+    name: Open Trails
+    type: text
+    guidance: Do not type here. Connect to the activity open trails from the loop item.
+  - id: totalDistance
+    name: Total Distance
+    type: text
+    guidance: >-
+      Do not type here. Connect to the activity total distance from the loop
+      item.
+description: >-
+  One activity (for example hiking) offered by a trail system, with its trail
+  count and distance.
+useTeamPermissions: true
+slots: []
+titleParameter: label
+canBeComposition: false
+created: '2026-10-19T11:13:44.07951+00:00'
+updated: '2026-10-19T11:13:44.07951+00:00'

@@ -1,0 +1,31 @@
+id: author
+name: Author
+created: '2026-10-08T08:19:38.405436+00:00'
+updated: '2026-10-08T08:19:38.405436+00:00'
+useTeamPermissions: true
+slugSettings: {}
+fields:
+  - id: name
+    name: Name
+    type: text
+    typeConfig:
+      required: true
+    localizable: true
+  - id: title
+    name: Title
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: image
+    name: Image
+    type: asset
+    typeConfig:
+      allowedTypes:
+        - image
+    localizable: true
+entryName: name
+thumbnailField: image
+icon: file-document
+type: contentType
+permissions: []
+previewConfigurations: []

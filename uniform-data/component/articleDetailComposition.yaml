@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: articleDetailComposition
+name: Article Detail Composition
+icon: card
+parameters: []
+useTeamPermissions: true
+slots:
+  - id: header
+    name: Header
+    allowedComponents: []
+    allowAllComponents: true
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: content
+    name: Content
+    allowedComponents: []
+    allowAllComponents: true
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: relatedArticles
+    name: Related Articles
+    allowedComponents: []
+    allowAllComponents: true
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: footer
+    name: Footer
+    allowedComponents: []
+    allowAllComponents: true
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+canBeComposition: true
+created: '2026-10-08T09:10:50.974956+00:00'
+updated: '2026-10-08T09:10:50.974956+00:00'

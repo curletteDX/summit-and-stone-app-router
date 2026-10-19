@@ -4,12 +4,14 @@ import {
   type LinkParamValue,
   type RichTextParamValue,
 } from "@uniformdev/canvas";
+
 import {
   UniformRichText,
   UniformText,
   type ComponentParameter,
   type ComponentProps,
 } from "@uniformdev/next-app-router/component";
+
 import Image from "next/image";
 import Link from "next/link";
 

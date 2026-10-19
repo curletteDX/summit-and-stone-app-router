@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: trailSystem
+name: Trail System
+icon: screen
+parameters:
+  - id: name
+    name: Name
+    type: text
+    guidance: Do not type here. Connect to the trail system name from the loop item.
+description: >-
+  A trail system with its name and a list of its activities. Place a Loop in the
+  Activities slot to repeat one Trail Activity per activity.
+useTeamPermissions: true
+slots:
+  - id: activities
+    name: Activities
+    allowedComponents:
+      - $loop
+      - trailActivity
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: true
+titleParameter: name
+canBeComposition: false
+created: '2026-10-19T11:13:45.132214+00:00'
+updated: '2026-10-19T11:13:45.132214+00:00'

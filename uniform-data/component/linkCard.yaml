@@ -1,0 +1,73 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: linkCard
+name: Link Card
+icon: screen
+parameters:
+  - id: title
+    name: Title
+    type: text
+    guidance: 2-5 word card title.
+    typeConfig:
+      required: true
+    localizable: true
+  - id: description
+    name: Description
+    type: text
+    guidance: One or two sentences, under 160 characters.
+    localizable: true
+  - id: image
+    name: Image
+    type: asset
+    guidance: Landscape photo, ideally 4:3.
+    typeConfig:
+      required: true
+      allowedTypes:
+        - image
+  - id: link
+    name: Link
+    type: link
+    typeConfig:
+      required: true
+      linkTypes:
+        tel: false
+        email: false
+      linkAttributes:
+        enableAnchor: true
+    localizable: true
+  - id: imageRatio
+    name: Image Ratio
+    type: select
+    typeConfig:
+      options:
+        - text: Standard (4:3)
+          value: standard
+        - text: Wide (16:9)
+          value: wide
+        - text: Square (1:1)
+          value: square
+  - id: hoverEffect
+    name: Image Hover Effect
+    type: select
+    typeConfig:
+      options:
+        - text: Zoom
+          value: zoom
+        - text: None
+          value: none
+  - id: showDescription
+    name: Show Description
+    type: checkbox
+  - id: showArrow
+    name: Show Arrow
+    type: checkbox
+description: >-
+  Clickable card with an image, title and short description that links to
+  another page.
+useTeamPermissions: true
+slots: []
+titleParameter: title
+thumbnailParameter: image
+canBeComposition: false
+created: '2026-10-07T13:43:49.003254+00:00'
+updated: '2026-10-07T13:43:49.003254+00:00'

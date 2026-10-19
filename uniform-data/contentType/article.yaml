@@ -1,0 +1,102 @@
+id: article
+name: Article
+created: '2026-10-08T08:18:21.475527+00:00'
+updated: '2026-10-08T09:53:44.744182+00:00'
+useTeamPermissions: true
+slugSettings: {}
+fields:
+  - id: title
+    name: Title
+    type: text
+    typeConfig:
+      required: true
+    localizable: true
+  - id: subtitle
+    name: Subtitle
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: image
+    name: Image
+    type: asset
+    typeConfig:
+      required: true
+      allowedTypes:
+        - image
+    localizable: true
+  - id: imageAttribution
+    name: Image Attribution
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: author
+    name: Author
+    type: contentReference
+    typeConfig:
+      allowedContentTypes:
+        - author
+  - id: publishDate
+    name: Publish Date
+    type: date
+    typeConfig: null
+  - id: readTime
+    name: Read Time
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: content
+    name: Content
+    type: richText
+    typeConfig:
+      elements:
+        builtIn:
+          - h1
+          - h2
+          - h3
+          - h4
+          - h5
+          - h6
+          - unorderedList
+          - orderedList
+          - link
+          - quote
+          - code
+          - table
+          - asset
+          - variable
+      required: false
+      formatting:
+        builtIn:
+          - bold
+          - italic
+      elementsConfig:
+        link:
+          enableAnchor: true
+        asset:
+          allowedTypes:
+            - image
+            - video
+    localizable: true
+  - id: articleCategories
+    name: Article Categories
+    type: multi-select
+    typeConfig:
+      options:
+        - text: Hiking
+          value: hiking
+        - text: Sunrise
+          value: sunrise
+        - text: Beginner
+          value: beginner
+entryName: title
+thumbnailField: image
+icon: file-document
+type: contentType
+permissions: []
+previewConfigurations:
+  - type: project-map
+    id: cc96d630-71db-49ca-884b-c458575e1758
+    label: Article Detail
+    dynamicInputs:
+      locale: ${locale}
+      article-url: ${#jptr:/entry/_slug}

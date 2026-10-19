@@ -3,9 +3,7 @@ import { notFound } from "next/navigation";
 
 import CardGrid from "@/app/static/_components/CardGrid";
 import LinkCard from "@/app/static/_components/LinkCard";
-import NewsArticleBody from "@/app/static/_components/NewsArticleBody";
-import NewsArticleHero from "@/app/static/_components/NewsArticleHero";
-import NewsArticleIntro from "@/app/static/_components/NewsArticleIntro";
+import NewsArticle from "@/app/static/_components/NewsArticle";
 import { getNewsArticle, newsArticles, unsplash } from "@/app/static/_data/news";
 
 type NewsArticlePageProps = { params: Promise<{ slug: string }> };
@@ -49,26 +47,24 @@ export default async function StaticNewsArticlePage({ params }: NewsArticlePageP
 
   return (
     <>
-      <article>
-        <NewsArticleHero
-          imageUrl={unsplash(article.image.id, 1600)}
-          imageAlt={article.image.alt}
-          caption={article.image.caption}
-          credit={article.image.credit}
-        />
-        <NewsArticleIntro
-          title={article.title}
-          summary={article.summary}
-          category={article.category}
-          authorName={article.author.name}
-          authorRole={article.author.role}
-          publishDate={article.publishDate}
-          updatedDate={article.updatedDate}
-          readTimeMinutes={article.readTimeMinutes}
-          thumbnailUrl={unsplash(article.image.id, 400)}
-        />
-        <NewsArticleBody tags={article.tags}>{article.content}</NewsArticleBody>
-      </article>
+      <NewsArticle
+        imageUrl={unsplash(article.image.id, 1600)}
+        imageAlt={article.image.alt}
+        caption={article.image.caption}
+        credit={article.image.credit}
+        title={article.title}
+        summary={article.summary}
+        category={article.category}
+        authorName={article.author.name}
+        authorRole={article.author.role}
+        publishDate={article.publishDate}
+        updatedDate={article.updatedDate}
+        readTimeMinutes={article.readTimeMinutes}
+        thumbnailUrl={unsplash(article.image.id, 400)}
+        tags={article.tags}
+      >
+        {article.content}
+      </NewsArticle>
 
       {related.length > 0 && (
         <CardGrid
